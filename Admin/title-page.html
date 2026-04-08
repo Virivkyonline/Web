@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Titulná strana</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="customers.html">Zákazníci</a>
+        <a class="nav-item" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item active" href="title-page.html">Titulná strana</a>
+        <a class="nav-item" href="editor.html">Editor / HTML</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať bloky titulnej strany" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Vzhľad a obsah</p>
+            <h1>Titulná strana</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Hlavný banner</h2>
+          </div>
+
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Hlavný nadpis</span>
+              <input type="text" value="Luxusné vírivky Platinum Lech Spa" />
+            </label>
+
+            <label class="form-field">
+              <span>Podnadpis</span>
+              <textarea rows="4">Objavte kvalitné vírivky s dopravou, montážou a dlhodobým servisom. Vyberáme modely, ktoré zákazníkom prinášajú komfort, spoľahlivosť a moderný dizajn.</textarea>
+            </label>
+
+            <div class="form-grid two-cols">
+              <label class="form-field">
+                <span>Tlačidlo 1 – text</span>
+                <input type="text" value="Zobraziť ponuku" />
+              </label>
+
+              <label class="form-field">
+                <span>Tlačidlo 1 – odkaz</span>
+                <input type="text" value="/virivky" />
+              </label>
+
+              <label class="form-field">
+                <span>Tlačidlo 2 – text</span>
+                <input type="text" value="Kontaktujte nás" />
+              </label>
+
+              <label class="form-field">
+                <span>Tlačidlo 2 – odkaz</span>
+                <input type="text" value="/kontakt" />
+              </label>
+            </div>
+
+            <label class="form-field">
+              <span>Obrázok banneru</span>
+              <div class="gallery-grid" style="grid-template-columns: repeat(1, minmax(0, 280px));">
+                <div class="gallery-item" style="min-height: 220px;">HLAVNÝ BANNER</div>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <section class="detail-form-grid" style="margin-top: 18px;">
+          <article class="panel">
+            <h2>Zvýraznené kategórie</h2>
+
+            <div class="docs-grid">
+              <div class="doc-card">
+                <div>
+                  <strong>Akrylátové vírivky</strong>
+                  <span>/akrylatove-virivky</span>
+                </div>
+                <div class="doc-actions">
+                  <button class="action-icon-btn" type="button">Upraviť</button>
+                </div>
+              </div>
+
+              <div class="doc-card">
+                <div>
+                  <strong>Luxusné vírivky</strong>
+                  <span>/luxusne-virivky</span>
+                </div>
+                <div class="doc-actions">
+                  <button class="action-icon-btn" type="button">Upraviť</button>
+                </div>
+              </div>
+
+              <div class="doc-card">
+                <div>
+                  <strong>Doplnky a výbava</strong>
+                  <span>/doplnky-k-virivkam</span>
+                </div>
+                <div class="doc-actions">
+                  <button class="action-icon-btn" type="button">Upraviť</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Top produkty na úvod</h2>
+
+            <div class="docs-grid">
+              <div class="doc-card">
+                <div>
+                  <strong>Vírivka SUN 200x160x90</strong>
+                  <span>Aktívna na titulnej strane</span>
+                </div>
+              </div>
+
+              <div class="doc-card">
+                <div>
+                  <strong>Vírivka New Maximus</strong>
+                  <span>Aktívna na titulnej strane</span>
+                </div>
+              </div>
+
+              <div class="doc-card">
+                <div>
+                  <strong>Vírivka SPLIT Extratherm</strong>
+                  <span>Aktívna na titulnej strane</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Výhody / ikonkové bloky</h2>
+          </div>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Výhoda 1</span>
+              <input type="text" value="Doprava a montáž v cene podľa logiky produktu" />
+            </label>
+
+            <label class="form-field">
+              <span>Výhoda 2</span>
+              <input type="text" value="Záručný aj pozáručný servis" />
+            </label>
+
+            <label class="form-field">
+              <span>Výhoda 3</span>
+              <input type="text" value="Overené modely a spokojní zákazníci" />
+            </label>
+
+            <label class="form-field">
+              <span>Výhoda 4</span>
+              <input type="text" value="Možnosť individuálnej konfigurácie" />
+            </label>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>SEO text na titulnú stranu</h2>
+          </div>
+
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Nadpis SEO textu</span>
+              <input type="text" value="Prečo si vybrať vírivku od Platinum Lech Spa" />
+            </label>
+
+            <label class="form-field">
+              <span>Text</span>
+              <textarea rows="10">Platinum Lech Spa prináša zákazníkom kvalitné vírivky, ktoré spájajú komfort, moderný vzhľad a dlhodobú spoľahlivosť. Naším cieľom je, aby zákazník presne vedel, od koho nakupuje, pretože pri vírivke je dôležitý nielen samotný produkt, ale aj servis, komunikácia a podpora po predaji. Ponúkame modely pre menšie aj väčšie priestory, rôzne farebné varianty akrylu a obloženia a priebežne dopĺňame aj doplnkovú výbavu.</textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="detail-form-grid" style="margin-top: 18px;">
+          <article class="panel">
+            <h2>Akčný blok</h2>
+
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Nadpis</span>
+                <input type="text" value="Akciové modely skladom" />
+              </label>
+
+              <label class="form-field">
+                <span>Text</span>
+                <textarea rows="5">Vybrané modely víriviek máme pripravené skladom alebo s rýchlym dodaním. V prípade záujmu odporúčame rezerváciu zálohou.</textarea>
+              </label>
+
+              <label class="form-field">
+                <span>Text tlačidla</span>
+                <input type="text" value="Pozrieť akcie" />
+              </label>
+
+              <label class="form-field">
+                <span>Odkaz tlačidla</span>
+                <input type="text" value="/akcie" />
+              </label>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Kontaktný blok</h2>
+
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Nadpis</span>
+                <input type="text" value="Potrebujete poradiť s výberom?" />
+              </label>
+
+              <label class="form-field">
+                <span>Telefón</span>
+                <input type="text" value="+421 949 444 066" />
+              </label>
+
+              <label class="form-field">
+                <span>Email</span>
+                <input type="text" value="info@virivkyonline.sk" />
+              </label>
+            </div>
+          </article>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Náhľad titulnej strany</button>
+          <button class="primary-btn" type="button">Uložiť</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
