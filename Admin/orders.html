@@ -1,1 +1,270 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Objednávky</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
 
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item active" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="#">Zákazníci</a>
+        <a class="nav-item" href="#">Doklady</a>
+        <a class="nav-item" href="#">Kategórie</a>
+        <a class="nav-item" href="#">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item" href="#">Nastavenia</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="Hľadať objednávky, produkty alebo zákazníkov"
+            />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Objednávky</p>
+            <h1>Prehľad objednávok</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="order-tabs">
+            <button class="tab-btn active" type="button">Všetky objednávky</button>
+            <button class="tab-btn" type="button">Prijatá objednávka</button>
+            <button class="tab-btn" type="button">Na objednávke sa pracuje</button>
+            <button class="tab-btn" type="button">Poslaná zálohová faktúra</button>
+            <button class="tab-btn" type="button">Uhradená záloha</button>
+            <button class="tab-btn" type="button">Vybavená</button>
+            <button class="tab-btn" type="button">Stornovaná</button>
+          </div>
+
+          <div class="orders-toolbar">
+            <div class="toolbar-left">
+              <button class="secondary-btn" type="button">FUNKCIA</button>
+              <label class="bulk-check">
+                <input type="checkbox" />
+                <span>Použiť na všetky stránky</span>
+              </label>
+            </div>
+
+            <div class="toolbar-right">
+              <button class="secondary-btn" type="button">FILTER</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table orders-table">
+              <thead>
+                <tr>
+                  <th class="check-col"></th>
+                  <th>Kód a dátum</th>
+                  <th>Meno a priezvisko</th>
+                  <th>Spôsob dopravy</th>
+                  <th>Platba</th>
+                  <th>Stav</th>
+                  <th>Cena</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>2026000067</strong>
+                    <span>7.4.2026 13:46</span>
+                  </td>
+                  <td>
+                    <strong>Marek Duchoň</strong>
+                    <span>KK - SOLARTECH s. r. o.</span>
+                  </td>
+                  <td>Packeta Z-Point</td>
+                  <td>Prevodom vopred na účet</td>
+                  <td>
+                    <select class="status-select">
+                      <option selected>Nevybavená</option>
+                      <option>Prijatá objednávka</option>
+                      <option>Na objednávke sa pracuje</option>
+                      <option>Poslaná zálohová faktúra</option>
+                      <option>Uhradená záloha</option>
+                      <option>Vybavená</option>
+                      <option>Stornovaná</option>
+                    </select>
+                  </td>
+                  <td>€103,40</td>
+                  <td>
+                    <div class="actions">
+                      <a href="detail.html" class="action-btn">Detail</a>
+                      <button class="action-icon-btn" type="button">PDF</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>2026000062</strong>
+                    <span>1.4.2026 19:48</span>
+                  </td>
+                  <td>
+                    <strong>Ivan Cintula</strong>
+                    <span>IC Express s. r. o.</span>
+                  </td>
+                  <td>Zadarmo pri objednaní vírivky</td>
+                  <td>Prevodom (záloha 500€ a doplatok)</td>
+                  <td>
+                    <select class="status-select">
+                      <option>Nevybavená</option>
+                      <option>Prijatá objednávka</option>
+                      <option selected>Na objednávke sa pracuje</option>
+                      <option>Poslaná zálohová faktúra</option>
+                      <option>Uhradená záloha</option>
+                      <option>Vybavená</option>
+                      <option>Stornovaná</option>
+                    </select>
+                  </td>
+                  <td>€2 599</td>
+                  <td>
+                    <div class="actions">
+                      <a href="detail.html" class="action-btn">Detail</a>
+                      <button class="action-icon-btn" type="button">PDF</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>2026000032</strong>
+                    <span>26.2.2026 16:18</span>
+                  </td>
+                  <td>
+                    <strong>Milan Bajbak</strong>
+                    <span>MIBA SK sro</span>
+                  </td>
+                  <td>Zadarmo pri objednaní vírivky</td>
+                  <td>Prevodom (záloha 500€ a doplatok)</td>
+                  <td>
+                    <select class="status-select">
+                      <option>Nevybavená</option>
+                      <option>Prijatá objednávka</option>
+                      <option>Na objednávke sa pracuje</option>
+                      <option>Poslaná zálohová faktúra</option>
+                      <option selected>Uhradená záloha</option>
+                      <option>Vybavená</option>
+                      <option>Stornovaná</option>
+                    </select>
+                  </td>
+                  <td>€7 999</td>
+                  <td>
+                    <div class="actions">
+                      <a href="detail.html" class="action-btn">Detail</a>
+                      <button class="action-icon-btn" type="button">PDF</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>2025000097</strong>
+                    <span>4.7.2025 15:40</span>
+                  </td>
+                  <td>
+                    <strong>Jozef Beňuška</strong>
+                    <span>&nbsp;</span>
+                  </td>
+                  <td>Zadarmo pri objednaní vírivky</td>
+                  <td>Prevodom (záloha 500€ a doplatok)</td>
+                  <td>
+                    <select class="status-select">
+                      <option>Nevybavená</option>
+                      <option>Prijatá objednávka</option>
+                      <option>Na objednávke sa pracuje</option>
+                      <option>Poslaná zálohová faktúra</option>
+                      <option>Uhradená záloha</option>
+                      <option selected>Vybavená</option>
+                      <option>Stornovaná</option>
+                    </select>
+                  </td>
+                  <td>€7 999</td>
+                  <td>
+                    <div class="actions">
+                      <a href="detail.html" class="action-btn">Detail</a>
+                      <button class="action-icon-btn" type="button">PDF</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>2025000178</strong>
+                    <span>14.12.2025 13:08</span>
+                  </td>
+                  <td>
+                    <strong>Ľubomír Oravec</strong>
+                    <span>&nbsp;</span>
+                  </td>
+                  <td>Packeta Z-Point</td>
+                  <td>Prevodom vopred na účet</td>
+                  <td>
+                    <select class="status-select">
+                      <option>Nevybavená</option>
+                      <option>Prijatá objednávka</option>
+                      <option>Na objednávke sa pracuje</option>
+                      <option>Poslaná zálohová faktúra</option>
+                      <option>Uhradená záloha</option>
+                      <option>Vybavená</option>
+                      <option selected>Stornovaná</option>
+                    </select>
+                  </td>
+                  <td>€0</td>
+                  <td>
+                    <div class="actions">
+                      <a href="detail.html" class="action-btn">Detail</a>
+                      <button class="action-icon-btn" type="button">PDF</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="orders-footer">
+            <button class="secondary-btn" type="button">VIAC FUNKCIÍ</button>
+            <button class="primary-btn" type="button">ULOŽIŤ</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
