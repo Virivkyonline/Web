@@ -142,10 +142,11 @@ input {
 
 .search-box button {
   border: 0;
-  padding: 0 18px;
-  background: rgba(255, 255, 255, 0.14);
+  padding: 0 22px;
+  background: rgba(255, 255, 255, 0.16);
   color: #fff;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .topbar-right {
@@ -164,7 +165,7 @@ input {
 }
 
 .content {
-  padding: 24px 20px 34px;
+  padding: 26px 22px 38px;
 }
 
 .page-header {
@@ -253,7 +254,8 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
 }
 
 .panel-link {
