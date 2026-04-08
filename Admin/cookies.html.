@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Cookies</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="customers.html">Zákazníci</a>
+        <a class="nav-item" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="title-page.html">Titulná strana</a>
+        <a class="nav-item" href="banners.html">Bannery</a>
+        <a class="nav-item" href="menu-settings.html">Menu webu</a>
+        <a class="nav-item" href="links.html">Odkazy</a>
+        <a class="nav-item" href="icons.html">Ikony</a>
+        <a class="nav-item active" href="cookies.html">Cookies</a>
+        <a class="nav-item" href="editor.html">Editor / HTML</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať cookies alebo text lišty" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Vzhľad a obsah</p>
+            <h1>Cookies</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Nastavenie cookie lišty</h2>
+          </div>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Zapnúť cookie lištu</span>
+              <select>
+                <option selected>Áno</option>
+                <option>Nie</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Režim súhlasu</span>
+              <select>
+                <option selected>Základný</option>
+                <option>Rozšírený</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Text tlačidla Súhlasím</span>
+              <input type="text" value="Súhlasím" />
+            </label>
+
+            <label class="form-field">
+              <span>Text tlačidla Nastavenia</span>
+              <input type="text" value="Nastavenia cookies" />
+            </label>
+          </div>
+
+          <div class="form-grid" style="margin-top: 18px;">
+            <label class="form-field">
+              <span>Text cookie lišty</span>
+              <textarea rows="6">Používame cookies, aby sme vám zabezpečili čo najlepší zážitok z webu, správne fungovanie stránok, meranie návštevnosti a zobrazenie relevantného obsahu. Viac informácií nájdete v zásadách ochrany osobných údajov.</textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="detail-form-grid" style="margin-top: 18px;">
+          <article class="panel">
+            <h2>Kategórie cookies</h2>
+
+            <div class="check-list">
+              <label><input type="checkbox" checked /> Nevyhnutné cookies</label>
+              <label><input type="checkbox" checked /> Analytické cookies</label>
+              <label><input type="checkbox" checked /> Marketingové cookies</label>
+              <label><input type="checkbox" /> Preferenčné cookies</label>
+            </div>
+
+            <div class="form-grid" style="margin-top: 18px;">
+              <label class="form-field">
+                <span>Text pre nevyhnutné cookies</span>
+                <textarea rows="4">Tieto cookies sú potrebné pre správne fungovanie webu a nie je možné ich vypnúť.</textarea>
+              </label>
+
+              <label class="form-field">
+                <span>Text pre analytické cookies</span>
+                <textarea rows="4">Tieto cookies nám pomáhajú merať návštevnosť a zlepšovať obsah webu.</textarea>
+              </label>
+
+              <label class="form-field">
+                <span>Text pre marketingové cookies</span>
+                <textarea rows="4">Tieto cookies slúžia na zobrazenie relevantnej reklamy a marketingových nástrojov.</textarea>
+              </label>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Vzhľad lišty</h2>
+
+            <div class="form-grid two-cols">
+              <label class="form-field">
+                <span>Pozícia lišty</span>
+                <select>
+                  <option selected>Dole</option>
+                  <option>Hore</option>
+                  <option>Plávajúci box</option>
+                </select>
+              </label>
+
+              <label class="form-field">
+                <span>Farba pozadia</span>
+                <input type="text" value="#1c2230" />
+              </label>
+
+              <label class="form-field">
+                <span>Farba textu</span>
+                <input type="text" value="#ffffff" />
+              </label>
+
+              <label class="form-field">
+                <span>Farba tlačidla</span>
+                <input type="text" value="#169c53" />
+              </label>
+            </div>
+
+            <div class="gallery-grid" style="margin-top: 18px; grid-template-columns: repeat(1, minmax(0, 1fr));">
+              <div class="gallery-item" style="min-height: 180px;">NÁHĽAD COOKIE LIŠTY</div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Odkazy a doplnkové nastavenia</h2>
+          </div>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Odkaz na zásady ochrany osobných údajov</span>
+              <input type="text" value="/ochrana-osobnych-udajov" />
+            </label>
+
+            <label class="form-field">
+              <span>Odkaz na podmienky cookies</span>
+              <input type="text" value="/cookies" />
+            </label>
+
+            <label class="form-field">
+              <span>Doba uloženia súhlasu (dni)</span>
+              <input type="number" value="180" />
+            </label>
+
+            <label class="form-field">
+              <span>Znovu zobraziť lištu po uplynutí</span>
+              <select>
+                <option selected>Áno</option>
+                <option>Nie</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="check-list" style="margin-top: 18px;">
+            <label><input type="checkbox" checked /> Zobraziť odkaz na nastavenie cookies v pätičke</label>
+            <label><input type="checkbox" checked /> Umožniť odmietnuť analytické cookies</label>
+            <label><input type="checkbox" checked /> Umožniť odmietnuť marketingové cookies</label>
+            <label><input type="checkbox" /> Automaticky prijať všetky cookies</label>
+          </div>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Náhľad lišty</button>
+          <button class="primary-btn" type="button">Uložiť</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
