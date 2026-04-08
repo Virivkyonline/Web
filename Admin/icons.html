@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Ikony</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="customers.html">Zákazníci</a>
+        <a class="nav-item" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="title-page.html">Titulná strana</a>
+        <a class="nav-item" href="banners.html">Bannery</a>
+        <a class="nav-item" href="menu-settings.html">Menu webu</a>
+        <a class="nav-item" href="links.html">Odkazy</a>
+        <a class="nav-item active" href="icons.html">Ikony</a>
+        <a class="nav-item" href="editor.html">Editor / HTML</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať ikony alebo označenia" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Vzhľad a obsah</p>
+            <h1>Ikony</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Správa ikon</h2>
+            <button class="secondary-btn" type="button">Pridať ikonu</button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Poradie</th>
+                  <th>Názov</th>
+                  <th>Použitie</th>
+                  <th>Typ</th>
+                  <th>Viditeľnosť</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>
+                    <strong>Servis</strong>
+                    <span>Ikona výhody na webe</span>
+                  </td>
+                  <td>Výhody / titulná strana</td>
+                  <td><span class="status status-done">SVG</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2.</td>
+                  <td>
+                    <strong>Doprava</strong>
+                    <span>Ikona dopravy a montáže</span>
+                  </td>
+                  <td>Výhody / bannery</td>
+                  <td><span class="status status-done">SVG</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3.</td>
+                  <td>
+                    <strong>Garancia</strong>
+                    <span>Ikona záruky</span>
+                  </td>
+                  <td>Produkt / výhody</td>
+                  <td><span class="status status-paid">PNG</span></td>
+                  <td><span class="status status-work">Pripravené</span></td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4.</td>
+                  <td>
+                    <strong>Facebook</strong>
+                    <span>Sociálna ikona</span>
+                  </td>
+                  <td>Pätička / odkazy</td>
+                  <td><span class="status status-done">SVG</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="detail-form-grid" style="margin-top: 18px;">
+          <article class="panel">
+            <h2>Detail ikony</h2>
+
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Názov ikony</span>
+                <input type="text" value="Servis" />
+              </label>
+
+              <label class="form-field">
+                <span>Interné označenie</span>
+                <input type="text" value="icon-servis" />
+              </label>
+
+              <div class="form-grid two-cols">
+                <label class="form-field">
+                  <span>Typ súboru</span>
+                  <select>
+                    <option selected>SVG</option>
+                    <option>PNG</option>
+                    <option>JPG</option>
+                    <option>WebP</option>
+                  </select>
+                </label>
+
+                <label class="form-field">
+                  <span>Viditeľnosť</span>
+                  <select>
+                    <option selected>Zobraziť</option>
+                    <option>Skryť</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="form-field">
+                <span>Použitie</span>
+                <input type="text" value="Titulná strana / konkurenčné výhody" />
+              </label>
+
+              <label class="form-field">
+                <span>Popis</span>
+                <textarea rows="4" placeholder="Interný popis ikony...">Ikona pre servis a podporu po predaji.</textarea>
+              </label>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Náhľad a súbor</h2>
+
+            <div class="gallery-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+              <div class="gallery-item">NÁHĽAD IKONY</div>
+              <div class="gallery-item add-gallery">Nahrať ikonu</div>
+            </div>
+
+            <div class="form-grid" style="margin-top: 18px;">
+              <label class="form-field">
+                <span>Názov súboru / URL</span>
+                <input type="text" placeholder="icon-servis.svg" />
+              </label>
+
+              <div class="actions">
+                <button class="secondary-btn" type="button">Nahrať</button>
+                <button class="secondary-btn" type="button">Vymazať</button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Priradenie ikon</h2>
+          </div>
+
+          <div class="check-list">
+            <label><input type="checkbox" checked /> Použiť na titulnej strane</label>
+            <label><input type="checkbox" checked /> Použiť vo výhodách produktu</label>
+            <label><input type="checkbox" /> Použiť v hlavnom menu</label>
+            <label><input type="checkbox" checked /> Použiť v pätičke webu</label>
+            <label><input type="checkbox" /> Použiť v banneroch</label>
+          </div>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Viac funkcií</button>
+          <button class="primary-btn" type="button">Uložiť</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
