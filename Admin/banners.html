@@ -1,1 +1,313 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Bannery</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
 
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="customers.html">Zákazníci</a>
+        <a class="nav-item" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="title-page.html">Titulná strana</a>
+        <a class="nav-item active" href="banners.html">Bannery</a>
+        <a class="nav-item" href="editor.html">Editor / HTML</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať bannery alebo názvy kampaní" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Vzhľad a obsah</p>
+            <h1>Bannery</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="order-tabs">
+            <button class="tab-btn active" type="button">Bannery</button>
+            <button class="tab-btn" type="button">Doplnkové bannery</button>
+            <button class="tab-btn" type="button">Carousel</button>
+            <button class="tab-btn" type="button">Konkurenčné výhody</button>
+          </div>
+
+          <div class="doc-card" style="margin-bottom: 18px;">
+            <div>
+              <strong>Informácia</strong>
+              <span>Tu spravuješ bannery na titulnej strane, doplnkové bannery a karuselové položky pre web Platinum Lech Spa.</span>
+            </div>
+          </div>
+
+          <div class="panel-head">
+            <h2>Hlavné bannery</h2>
+            <button class="secondary-btn" type="button">Pridať banner</button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Poradie</th>
+                  <th>Názov</th>
+                  <th>Zobraziť od</th>
+                  <th>Zobraziť do</th>
+                  <th>Viditeľnosť</th>
+                  <th>Pozícia</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>
+                    <strong>Hlavný banner</strong>
+                    <span>Luxusné vírivky Platinum Lech Spa</span>
+                  </td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td><span class="status status-done">Aktívny</span></td>
+                  <td>Hore</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2.</td>
+                  <td>
+                    <strong>Akciový banner</strong>
+                    <span>Modely skladom / rýchle dodanie</span>
+                  </td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td><span class="status status-work">Pripravený</span></td>
+                  <td>Stred</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3.</td>
+                  <td>
+                    <strong>Kontakt banner</strong>
+                    <span>Potrebujete poradiť s výberom?</span>
+                  </td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td><span class="status status-paid">Zverejnený</span></td>
+                  <td>Dole</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="detail-form-grid" style="margin-top: 18px;">
+          <article class="panel">
+            <h2>Detail banneru</h2>
+
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Názov banneru</span>
+                <input type="text" value="Hlavný banner" />
+              </label>
+
+              <label class="form-field">
+                <span>Nadpis</span>
+                <input type="text" value="Luxusné vírivky Platinum Lech Spa" />
+              </label>
+
+              <label class="form-field">
+                <span>Podnadpis</span>
+                <textarea rows="5">Objavte kvalitné vírivky s dopravou, montážou a dlhodobým servisom. Vyberáme modely, ktoré zákazníkom prinášajú komfort, spoľahlivosť a moderný dizajn.</textarea>
+              </label>
+
+              <div class="form-grid two-cols">
+                <label class="form-field">
+                  <span>Text tlačidla</span>
+                  <input type="text" value="Zobraziť ponuku" />
+                </label>
+
+                <label class="form-field">
+                  <span>Odkaz tlačidla</span>
+                  <input type="text" value="/virivky" />
+                </label>
+
+                <label class="form-field">
+                  <span>Druhé tlačidlo</span>
+                  <input type="text" value="Kontaktujte nás" />
+                </label>
+
+                <label class="form-field">
+                  <span>Odkaz druhého tlačidla</span>
+                  <input type="text" value="/kontakt" />
+                </label>
+              </div>
+
+              <div class="form-grid two-cols">
+                <label class="form-field">
+                  <span>Pozícia</span>
+                  <select>
+                    <option selected>Hore</option>
+                    <option>Stred</option>
+                    <option>Dole</option>
+                    <option>Vľavo</option>
+                    <option>Vpravo</option>
+                  </select>
+                </label>
+
+                <label class="form-field">
+                  <span>Viditeľnosť</span>
+                  <select>
+                    <option selected>Zobraziť</option>
+                    <option>Skryť</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Obrázok banneru</h2>
+
+            <div class="gallery-grid">
+              <div class="gallery-item" style="min-height: 240px;">NÁHĽAD BANNERU</div>
+            </div>
+
+            <div class="form-grid" style="margin-top: 18px;">
+              <label class="form-field">
+                <span>Názov súboru / URL</span>
+                <input type="text" placeholder="banner-hlavny.jpg" />
+              </label>
+
+              <div class="actions">
+                <button class="secondary-btn" type="button">Nahrať obrázok</button>
+                <button class="secondary-btn" type="button">Vymazať obrázok</button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Carousel bannery</h2>
+            <button class="secondary-btn" type="button">Pridať slide</button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Poradie</th>
+                  <th>Názov</th>
+                  <th>Text</th>
+                  <th>Viditeľnosť</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td><strong>Carousel 1</strong></td>
+                  <td>Akciové vírivky a novinky</td>
+                  <td><span class="status status-done">Aktívny</span></td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2.</td>
+                  <td><strong>Carousel 2</strong></td>
+                  <td>Servis a montáž víriviek</td>
+                  <td><span class="status status-work">Pripravený</span></td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Konkurenčné výhody</h2>
+            <button class="secondary-btn" type="button">Pridať výhodu</button>
+          </div>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Výhoda 1</span>
+              <input type="text" value="Dlhoročné skúsenosti a poradenstvo" />
+            </label>
+
+            <label class="form-field">
+              <span>Výhoda 2</span>
+              <input type="text" value="Záručný aj pozáručný servis" />
+            </label>
+
+            <label class="form-field">
+              <span>Výhoda 3</span>
+              <input type="text" value="Doprava a montáž podľa logiky produktu" />
+            </label>
+
+            <label class="form-field">
+              <span>Výhoda 4</span>
+              <input type="text" value="Overené modely a spokojní zákazníci" />
+            </label>
+          </div>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Viac funkcií</button>
+          <button class="primary-btn" type="button">Uložiť</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
