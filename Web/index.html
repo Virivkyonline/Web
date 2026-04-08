@@ -1,1 +1,854 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platinum Lech Spa | Luxusné vírivky</title>
+  <meta name="description" content="Luxusné vírivky Platinum Lech Spa. Kvalitné modely, poradenstvo, servis, doprava a dlhoročné skúsenosti." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --bg-2:#121b2d;
+      --panel:#111a2b;
+      --panel-2:#18243b;
+      --line:rgba(255,255,255,.10);
+      --text:#f5f7fb;
+      --muted:#b8c3d6;
+      --gold:#d4af37;
+      --gold-2:#f0d67a;
+      --white:#ffffff;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:22px;
+      --max:1200px;
+    }
 
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,.13), transparent 24%),
+        radial-gradient(circle at top right, rgba(255,255,255,.05), transparent 22%),
+        linear-gradient(180deg, #09111e 0%, #0b1220 100%);
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max), calc(100% - 28px)); margin:0 auto}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:30;
+      backdrop-filter:blur(12px);
+      background:rgba(7,12,22,.78);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      min-height:74px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      background:linear-gradient(135deg, #c89a2a, #f0d67a);
+      color:#111;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:var(--shadow);
+      flex-shrink:0;
+    }
+
+    .brand-text{
+      min-width:0;
+    }
+
+    .brand-title{
+      font-weight:700;
+      letter-spacing:.04em;
+      color:var(--white);
+      font-size:18px;
+    }
+
+    .brand-sub{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:2px;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .nav a{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .nav a:hover{color:var(--white)}
+
+    .nav-cta{
+      min-height:44px;
+      padding:0 18px;
+      border-radius:999px;
+      border:1px solid rgba(212,175,55,.35);
+      background:rgba(212,175,55,.12);
+      color:var(--white) !important;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+    }
+
+    .hero{
+      padding:64px 0 34px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .hero-copy,
+    .hero-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-copy{
+      padding:34px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--gold-2);
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      margin-bottom:14px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:34px;
+      height:1px;
+      background:rgba(240,214,122,.8);
+      display:block;
+    }
+
+    h1{
+      margin:0;
+      font-size:54px;
+      line-height:1.03;
+      letter-spacing:-.02em;
+    }
+
+    .hero-copy p{
+      margin:18px 0 0;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.65;
+      max-width:760px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .btn{
+      min-height:52px;
+      padding:0 22px;
+      border-radius:16px;
+      border:1px solid transparent;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:15px;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, #c89a2a, #f0d67a);
+      color:#151515;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.04);
+      border-color:rgba(255,255,255,.14);
+      color:var(--white);
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      margin-top:28px;
+    }
+
+    .point{
+      padding:16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.035);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .point strong{
+      display:block;
+      font-size:15px;
+      margin-bottom:6px;
+    }
+
+    .point span{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .hero-card{
+      padding:18px;
+    }
+
+    .hero-visual{
+      min-height:100%;
+      border-radius:24px;
+      background:
+        linear-gradient(180deg, rgba(212,175,55,.14), rgba(255,255,255,.03)),
+        url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80") center/cover;
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      align-items:flex-end;
+      min-height:540px;
+    }
+
+    .hero-visual::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(11,18,32,.04), rgba(11,18,32,.65));
+    }
+
+    .hero-info{
+      position:relative;
+      z-index:1;
+      width:100%;
+      padding:22px;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+    }
+
+    .info-box{
+      padding:16px;
+      border-radius:18px;
+      background:rgba(8,13,23,.62);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(8px);
+    }
+
+    .info-box strong{
+      display:block;
+      font-size:15px;
+      margin-bottom:6px;
+    }
+
+    .info-box span{
+      color:#dbe5f3;
+      font-size:13px;
+    }
+
+    section.block{
+      padding:18px 0;
+    }
+
+    .section-head{
+      margin-bottom:18px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:34px;
+      line-height:1.15;
+    }
+
+    .section-head p{
+      margin:10px 0 0;
+      color:var(--muted);
+      line-height:1.6;
+      max-width:760px;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:16px;
+    }
+
+    .feature{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.018));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .feature-icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      background:rgba(212,175,55,.14);
+      border:1px solid rgba(212,175,55,.28);
+      color:var(--gold-2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      margin-bottom:16px;
+    }
+
+    .feature h3{
+      margin:0 0 10px;
+      font-size:19px;
+    }
+
+    .feature p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    .models{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .model{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.018));
+      border:1px solid var(--line);
+      border-radius:26px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .model-image{
+      aspect-ratio: 16 / 10;
+      background:#0e1728 center/cover no-repeat;
+    }
+
+    .model-body{
+      padding:20px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      min-height:30px;
+      padding:0 10px;
+      border-radius:999px;
+      background:rgba(212,175,55,.14);
+      color:var(--gold-2);
+      border:1px solid rgba(212,175,55,.22);
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .model h3{
+      margin:0;
+      font-size:22px;
+    }
+
+    .model p{
+      margin:10px 0 0;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+      min-height:66px;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+
+    .meta span{
+      padding:9px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.09);
+      color:#dce6f4;
+      font-size:12px;
+    }
+
+    .model-actions{
+      display:flex;
+      gap:10px;
+      margin-top:18px;
+      flex-wrap:wrap;
+    }
+
+    .trust{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .trust-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.018));
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .trust-card h3{
+      margin:0 0 12px;
+      font-size:24px;
+    }
+
+    .trust-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .check-list{
+      margin:18px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+
+    .check-list li{
+      padding-left:28px;
+      position:relative;
+      color:#dfe8f5;
+      line-height:1.55;
+    }
+
+    .check-list li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--gold-2);
+      font-weight:700;
+    }
+
+    .cta{
+      background:
+        radial-gradient(circle at left top, rgba(212,175,55,.17), transparent 25%),
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.018));
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:center;
+    }
+
+    .cta h2{
+      margin:0;
+      font-size:34px;
+      line-height:1.14;
+    }
+
+    .cta p{
+      margin:14px 0 0;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .contact-box{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:24px;
+      padding:22px;
+    }
+
+    .contact-item{
+      padding:14px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .contact-item:last-child{border-bottom:0}
+    .contact-item strong{
+      display:block;
+      margin-bottom:5px;
+      font-size:14px;
+      color:var(--gold-2);
+    }
+
+    .contact-item span{
+      color:#eef3fb;
+      word-break:break-word;
+    }
+
+    .footer{
+      padding:34px 0 50px;
+    }
+
+    .footer-inner{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:22px;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 1100px){
+      .hero-grid,
+      .cta,
+      .trust{
+        grid-template-columns:1fr;
+      }
+
+      .features{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .models{
+        grid-template-columns:1fr;
+      }
+
+      .hero-info{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 760px){
+      .nav{
+        display:none;
+      }
+
+      .hero{
+        padding-top:28px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .section-head h2,
+      .cta h2{
+        font-size:28px;
+      }
+
+      .features,
+      .hero-points{
+        grid-template-columns:1fr;
+      }
+
+      .hero-copy,
+      .hero-card,
+      .cta,
+      .trust-card{
+        padding:20px;
+      }
+
+      .hero-visual{
+        min-height:420px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">PL</div>
+        <div class="brand-text">
+          <div class="brand-title">PLATINUM LECH SPA</div>
+          <div class="brand-sub">Luxusné vírivky a dlhodobý servis</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#modely">Modely</a>
+        <a href="#vyhody">Výhody</a>
+        <a href="#preco">Prečo u nás</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a class="nav-cta" href="kontakt.html">Napísať dopyt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Platinum Lech Spa</div>
+          <h1>Luxusné vírivky pre komfort, relax a dlhodobú spokojnosť</h1>
+          <p>
+            Vyberáme modely, pri ktorých je dôležitý nielen vzhľad a výbava, ale aj spoľahlivosť,
+            servis a podpora po predaji. Pri vírivke je dôležité vedieť, od koho ju kupujete.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#modely">Pozrieť ponuku</a>
+            <a class="btn btn-secondary" href="kontakt.html">Kontaktovať nás</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="point">
+              <strong>Dlhoročné skúsenosti</strong>
+              <span>Predaj, poradenstvo a servis víriviek s dôrazom na dlhodobú spokojnosť.</span>
+            </div>
+            <div class="point">
+              <strong>Servis aj po predaji</strong>
+              <span>Záručný aj pozáručný servis je pri vírivkách rovnako dôležitý ako samotný produkt.</span>
+            </div>
+            <div class="point">
+              <strong>Overené modely</strong>
+              <span>Ponuka modelov pre terasu, záhradu aj náročnejších zákazníkov.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-visual">
+            <div class="hero-info">
+              <div class="info-box">
+                <strong>Luxusný dizajn</strong>
+                <span>Moderné línie, kvalitné materiály a elegantné farebné kombinácie.</span>
+              </div>
+              <div class="info-box">
+                <strong>Komfort a hydromasáž</strong>
+                <span>Premyslené rozloženie miest a funkčný relax pre každý deň.</span>
+              </div>
+              <div class="info-box">
+                <strong>Doprava a poradenstvo</strong>
+                <span>Pomôžeme s výberom vhodného modelu aj konfigurácie.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="vyhody">
+      <div class="container">
+        <div class="section-head">
+          <h2>Prečo si zákazníci vyberajú práve nás</h2>
+          <p>
+            Pri kúpe vírivky nejde len o cenu. Dôležité je aj to, kto vám poradí, kto zabezpečí servis
+            a kto bude k dispozícii aj po doručení a montáži.
+          </p>
+        </div>
+
+        <div class="features">
+          <article class="feature">
+            <div class="feature-icon">★</div>
+            <h3>Kvalitné modely</h3>
+            <p>Ponuka modelov vybraných s dôrazom na spoľahlivosť, komfort a dlhodobé používanie.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">⚙</div>
+            <h3>Servis a podpora</h3>
+            <p>Zákazník vie, na koho sa obrátiť pri otázkach, servise alebo nastavovaní vírivky.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">✓</div>
+            <h3>Reálne poradenstvo</h3>
+            <p>Pomôžeme s výberom modelu, rozmeru, výbavy aj vhodného umiestnenia.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">☎</div>
+            <h3>Priamy kontakt</h3>
+            <p>Rýchla komunikácia a možnosť riešiť dopyt telefonicky alebo emailom bez zbytočných prieťahov.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="modely">
+      <div class="container">
+        <div class="section-head">
+          <h2>Vybrané modely</h2>
+          <p>
+            Ukážka modelov, ktoré môžu tvoriť základ tvojej ponuky. Texty a názvy si vieš neskôr upraviť podľa skutočného sortimentu.
+          </p>
+        </div>
+
+        <div class="models">
+          <article class="model">
+            <div class="model-image" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="model-body">
+              <div class="badge">Kompaktný model</div>
+              <h3>Vírivka SUN</h3>
+              <p>Kompaktná vírivka ideálna do menších priestorov, na terasu alebo k rodinnému domu.</p>
+              <div class="meta">
+                <span>Menší priestor</span>
+                <span>Moderný vzhľad</span>
+                <span>Komfortný relax</span>
+              </div>
+              <div class="model-actions">
+                <a class="btn btn-primary" href="kontakt.html">Poslať dopyt</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="model">
+            <div class="model-image" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="model-body">
+              <div class="badge">Luxusná trieda</div>
+              <h3>New Maximus</h3>
+              <p>Reprezentatívny model pre zákazníkov, ktorí chcú vyšší komfort, dizajn a výraznejší priestor.</p>
+              <div class="meta">
+                <span>Prémiový vzhľad</span>
+                <span>Viac miest</span>
+                <span>Luxusný dojem</span>
+              </div>
+              <div class="model-actions">
+                <a class="btn btn-primary" href="kontakt.html">Poslať dopyt</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="model">
+            <div class="model-image" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="model-body">
+              <div class="badge">Efektívna voľba</div>
+              <h3>SPLIT Extratherm</h3>
+              <p>Model orientovaný na zákazníkov, ktorí chcú spojiť komfort, dizajn a praktické používanie.</p>
+              <div class="meta">
+                <span>Praktická voľba</span>
+                <span>Elegantný dizajn</span>
+                <span>Dopyt na mieru</span>
+              </div>
+              <div class="model-actions">
+                <a class="btn btn-primary" href="kontakt.html">Poslať dopyt</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="preco">
+      <div class="container trust">
+        <article class="trust-card">
+          <h3>Prečo je pri vírivke dôležitý predajca</h3>
+          <p>
+            Vírivka nie je jednorazový nákup na krátke obdobie. Zákazník potrebuje vedieť, kto za produktom stojí,
+            kto poradí s výberom a kto pomôže, keď bude treba servis, nastavenie alebo ďalšiu podporu.
+          </p>
+          <ul class="check-list">
+            <li>Jasná komunikácia pred kúpou aj po kúpe</li>
+            <li>Znalosť modelov a praktických rozdielov</li>
+            <li>Podpora pri výbere vhodného riešenia</li>
+            <li>Dlhodobejší vzťah so zákazníkom</li>
+          </ul>
+        </article>
+
+        <article class="trust-card">
+          <h3>Čo vieš od nás očakávať</h3>
+          <p>
+            Pri každom dopyte sa sústredíme na to, aby zákazník dostal zrozumiteľné informácie, realistické odporúčanie
+            a istotu, že nákup nebude len o odovzdaní produktu, ale aj o ďalšej starostlivosti.
+          </p>
+          <ul class="check-list">
+            <li>Pomoc s výberom vhodného modelu</li>
+            <li>Vysvetlenie výbavy a farebných variantov</li>
+            <li>Servisné a prevádzkové odporúčania</li>
+            <li>Priamy kontakt pri otázkach a dopytoch</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <div class="eyebrow">Kontakt</div>
+            <h2>Máte otázku k modelu, výbave alebo dodaniu?</h2>
+            <p>
+              Napíšte nám a radi vám odporučíme vhodný model, vysvetlíme rozdiely medzi variantmi
+              a pomôžeme s ďalším postupom.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="kontakt.html">Poslať dopyt</a>
+              <a class="btn btn-secondary" href="tel:+421949444066">Zavolať</a>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="contact-item">
+              <strong>Telefón</strong>
+              <span>+421 949 444 066</span>
+            </div>
+            <div class="contact-item">
+              <strong>Email</strong>
+              <span>info@virivkyonline.sk</span>
+            </div>
+            <div class="contact-item">
+              <strong>Značka</strong>
+              <span>Platinum Lech Spa</span>
+            </div>
+            <div class="contact-item">
+              <strong>Web</strong>
+              <span>virivkyonline.sk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© Platinum Lech Spa</div>
+      <div>Luxusné vírivky • Poradenstvo • Servis • Dlhodobá podpora</div>
+    </div>
+  </footer>
+</body>
+</html>
