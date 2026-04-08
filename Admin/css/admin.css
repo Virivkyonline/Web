@@ -462,3 +462,110 @@ h2 {
     border-radius: 16px;
   }
 }
+.order-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  background: #121720;
+  color: var(--muted);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: rgba(11, 94, 215, 0.16);
+  color: #fff;
+  border-color: rgba(11, 94, 215, 0.5);
+}
+
+.orders-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.toolbar-left,
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.secondary-btn,
+.primary-btn,
+.action-icon-btn {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  color: var(--text);
+}
+
+.secondary-btn,
+.action-icon-btn {
+  background: #1a202b;
+}
+
+.primary-btn {
+  background: var(--green);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-weight: 700;
+}
+
+.bulk-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.orders-table .check-col {
+  width: 44px;
+}
+
+.status-select {
+  min-width: 190px;
+  min-height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #1d2330;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.orders-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .status-select {
+    min-width: 160px;
+  }
+
+  .orders-footer {
+    flex-direction: column;
+  }
+
+  .orders-footer .primary-btn,
+  .orders-footer .secondary-btn {
+    width: 100%;
+  }
+}
