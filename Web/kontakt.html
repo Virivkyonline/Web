@@ -18,7 +18,6 @@
       --gold-2:#f0d67a;
       --white:#ffffff;
       --shadow:0 18px 50px rgba(0,0,0,.35);
-      --radius:22px;
       --max:1100px;
     }
 
@@ -139,6 +138,18 @@
       font-size:18px;
     }
 
+    .success-message{
+      display:none;
+      margin:0 0 22px;
+      padding:16px 18px;
+      border-radius:18px;
+      background:rgba(22,156,83,.14);
+      border:1px solid rgba(22,156,83,.35);
+      color:#dff7e8;
+      line-height:1.6;
+      font-weight:700;
+    }
+
     .grid{
       display:grid;
       grid-template-columns:.9fr 1.1fr;
@@ -255,15 +266,6 @@
       flex-shrink:0;
     }
 
-    .captcha{
-      padding:15px 16px;
-      border-radius:16px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.08);
-      color:#fff;
-      font-weight:700;
-    }
-
     .actions{
       display:flex;
       gap:12px;
@@ -351,6 +353,10 @@
         </p>
       </section>
 
+      <div id="successMessage" class="success-message">
+        Správa bola úspešne odoslaná. Ďakujeme, čoskoro sa vám ozveme.
+      </div>
+
       <section class="grid">
         <article class="card">
           <h2>Kontaktné údaje</h2>
@@ -384,7 +390,12 @@
         <article class="card">
           <h2>Formulár dopytu</h2>
 
-          <form class="form-grid" action="#" method="post">
+          <form action="https://api.web3forms.com/submit" method="POST" class="form-grid">
+            <input type="hidden" name="access_key" value="re_K73ZjUiN_KzfBd93rLPLQuRrzVGe3oQtc" />
+            <input type="hidden" name="subject" value="Dotaz z webu Platinum Lech Spa" />
+            <input type="hidden" name="from_name" value="Platinum Lech Spa Web" />
+            <input type="hidden" name="redirect" value="https://virivkyonline.github.io/Web/Web/kontakt.html?sent=1" />
+
             <div class="two">
               <label>
                 <span>Meno a priezvisko *</span>
@@ -405,7 +416,7 @@
 
               <label>
                 <span>Predmet</span>
-                <input type="text" name="subject" placeholder="Napr. Dopyt k modelu SUN" />
+                <input type="text" name="topic" placeholder="Napr. Dopyt k modelu SUN" />
               </label>
             </div>
 
@@ -419,10 +430,10 @@
               <span>Súhlasím so spracovaním osobných údajov za účelom vybavenia môjho dopytu. *</span>
             </label>
 
-            <div class="captcha">Bezpečnostné overenie / captcha sem doplníš podľa riešenia, ktoré použiješ.</div>
+            <input type="checkbox" name="botcheck" style="display:none;" />
 
             <div class="small">
-              Polia označené hviezdičkou sú povinné. Email a telefón sú nastavené ako povinné.
+              Polia označené hviezdičkou sú povinné. Email aj telefón sú povinné.
             </div>
 
             <div class="actions">
@@ -441,5 +452,13 @@
       <div>Kontakt • Dopyty • Poradenstvo • Servis</div>
     </div>
   </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("sent") === "1") {
+      const box = document.getElementById("successMessage");
+      if (box) box.style.display = "block";
+    }
+  </script>
 </body>
 </html>
