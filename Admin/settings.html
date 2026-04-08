@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Menu webu</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="customers.html">Zákazníci</a>
+        <a class="nav-item" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="title-page.html">Titulná strana</a>
+        <a class="nav-item" href="banners.html">Bannery</a>
+        <a class="nav-item active" href="menu-settings.html">Menu webu</a>
+        <a class="nav-item" href="editor.html">Editor / HTML</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať položky menu alebo odkazy" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Vzhľad a obsah</p>
+            <h1>Menu webu</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Hlavné menu</h2>
+            <button class="secondary-btn" type="button">Pridať položku</button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Poradie</th>
+                  <th>Názov položky</th>
+                  <th>Odkaz</th>
+                  <th>Typ</th>
+                  <th>Viditeľnosť</th>
+                  <th>Podmenu</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>
+                    <strong>Úvod</strong>
+                    <span>Hlavná položka menu</span>
+                  </td>
+                  <td>/</td>
+                  <td><span class="status status-done">Interný odkaz</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>Nie</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2.</td>
+                  <td>
+                    <strong>Vírivky</strong>
+                    <span>Hlavná kategória</span>
+                  </td>
+                  <td>/virivky</td>
+                  <td><span class="status status-done">Interný odkaz</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>Áno</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3.</td>
+                  <td>
+                    <strong>Doplnky</strong>
+                    <span>Podpora predaja doplnkov</span>
+                  </td>
+                  <td>/doplnky-k-virivkam</td>
+                  <td><span class="status status-done">Interný odkaz</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>Nie</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4.</td>
+                  <td>
+                    <strong>Kontakt</strong>
+                    <span>Kontaktná stránka</span>
+                  </td>
+                  <td>/kontakt</td>
+                  <td><span class="status status-done">Interný odkaz</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>Nie</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>5.</td>
+                  <td>
+                    <strong>Akcie</strong>
+                    <span>Akciové produkty a výpredaj</span>
+                  </td>
+                  <td>/akcie</td>
+                  <td><span class="status status-paid">Landing page</span></td>
+                  <td><span class="status status-work">Pripravené</span></td>
+                  <td>Nie</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="detail-form-grid" style="margin-top: 18px;">
+          <article class="panel">
+            <h2>Detail položky menu</h2>
+
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Názov položky</span>
+                <input type="text" value="Vírivky" />
+              </label>
+
+              <label class="form-field">
+                <span>URL odkaz</span>
+                <input type="text" value="/virivky" />
+              </label>
+
+              <div class="form-grid two-cols">
+                <label class="form-field">
+                  <span>Typ odkazu</span>
+                  <select>
+                    <option selected>Interný odkaz</option>
+                    <option>Externý odkaz</option>
+                    <option>Kategória</option>
+                    <option>Stránka</option>
+                  </select>
+                </label>
+
+                <label class="form-field">
+                  <span>Poradie</span>
+                  <input type="number" value="2" />
+                </label>
+
+                <label class="form-field">
+                  <span>Viditeľnosť</span>
+                  <select>
+                    <option selected>Zobraziť</option>
+                    <option>Skryť</option>
+                  </select>
+                </label>
+
+                <label class="form-field">
+                  <span>Rodičovská položka</span>
+                  <select>
+                    <option selected>Bez nadradenej položky</option>
+                    <option>Vírivky</option>
+                    <option>Doplnky</option>
+                    <option>Kontakt</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="form-field">
+                <span>Doplňujúci popis</span>
+                <textarea rows="4" placeholder="Interná poznámka alebo krátky popis položky menu...">Hlavná kategória produktov pre zákazníka.</textarea>
+              </label>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Nastavenie zobrazenia</h2>
+
+            <div class="check-list">
+              <label><input type="checkbox" checked /> Zobraziť v hlavnom menu</label>
+              <label><input type="checkbox" checked /> Povoliť v mobilnom menu</label>
+              <label><input type="checkbox" checked /> Povoliť rozbaľovacie podmenu</label>
+              <label><input type="checkbox" /> Otvárať v novom okne</label>
+              <label><input type="checkbox" /> Označiť ako zvýraznenú položku</label>
+            </div>
+
+            <div class="form-grid" style="margin-top: 18px;">
+              <label class="form-field">
+                <span>CSS trieda / interné označenie</span>
+                <input type="text" placeholder="napr. menu-highlight" />
+              </label>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Podmenu a rozšírené odkazy</h2>
+            <button class="secondary-btn" type="button">Pridať podmenu</button>
+          </div>
+
+          <div class="docs-grid">
+            <div class="doc-card">
+              <div>
+                <strong>Akrylátové vírivky</strong>
+                <span>Pod položkou: Vírivky</span>
+              </div>
+              <div class="doc-actions">
+                <button class="action-icon-btn" type="button">Upraviť</button>
+              </div>
+            </div>
+
+            <div class="doc-card">
+              <div>
+                <strong>Luxusné vírivky</strong>
+                <span>Pod položkou: Vírivky</span>
+              </div>
+              <div class="doc-actions">
+                <button class="action-icon-btn" type="button">Upraviť</button>
+              </div>
+            </div>
+
+            <div class="doc-card">
+              <div>
+                <strong>Chladiace kade</strong>
+                <span>Pod položkou: Vírivky</span>
+              </div>
+              <div class="doc-actions">
+                <button class="action-icon-btn" type="button">Upraviť</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Viac funkcií</button>
+          <button class="primary-btn" type="button">Uložiť</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
