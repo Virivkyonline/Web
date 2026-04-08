@@ -1,1 +1,311 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Povinné polia zákazníka</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
 
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="customers.html">Zákazníci</a>
+        <a class="nav-item" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="#">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item active" href="settings.html">Nastavenia</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať nastavenia, polia alebo sekcie" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Nastavenia / Zákazníci</p>
+            <h1>Povinné polia</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Fakturačná adresa</h2>
+          </div>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Meno a priezvisko</span>
+              <select>
+                <option selected>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Ulica</span>
+              <select>
+                <option selected>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Číslo domu</span>
+              <select>
+                <option selected>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Mesto</span>
+              <select>
+                <option selected>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Okres</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option selected>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>PSČ</span>
+              <select>
+                <option selected>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Štát</span>
+              <select>
+                <option selected>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Firemné údaje</h2>
+          </div>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Firemné údaje</span>
+              <select>
+                <option>Povinné</option>
+                <option selected>Nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Názov spoločnosti</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>IČO</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>IČ DPH</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>DIČ</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option selected>Nezobrazovať</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Kontaktné údaje</h2>
+          </div>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Telefón</span>
+              <select>
+                <option selected>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Email</span>
+              <select>
+                <option selected>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Dátum narodenia</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option selected>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Súhlas s marketingom</span>
+              <select>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Zobraziť ako povinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Doručovacia adresa</h2>
+          </div>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Meno a priezvisko</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Ulica</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Číslo domu</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option selected>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Okres</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option>Zobraziť ako nepovinné</option>
+                <option selected>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Mesto</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>PSČ</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Názov spoločnosti</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Štát</span>
+              <select>
+                <option>Zobraziť ako povinné</option>
+                <option selected>Zobraziť ako nepovinné</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Obnoviť predvolené</button>
+          <button class="primary-btn" type="button">Uložiť</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
