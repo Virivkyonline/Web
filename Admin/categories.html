@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Kategórie</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
 
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item active" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="#">Zákazníci</a>
+        <a class="nav-item" href="#">Doklady</a>
+        <a class="nav-item" href="#">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item" href="#">Nastavenia</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať kategórie, produkty alebo URL" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Produkty / SEO</p>
+            <h1>Prehľad kategórií</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="products-filter-grid">
+            <label class="form-field">
+              <span>Názov kategórie</span>
+              <input type="text" placeholder="Názov kategórie" />
+            </label>
+
+            <label class="form-field">
+              <span>URL</span>
+              <input type="text" placeholder="url-kategorie" />
+            </label>
+
+            <label class="form-field">
+              <span>Typ kategórie</span>
+              <select>
+                <option>Všetky</option>
+                <option>Bežná kategória</option>
+                <option>SEO kategória</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Zobrazenie zákazníkovi</span>
+              <select>
+                <option>Všetko</option>
+                <option>Zobraziť zákazníkovi</option>
+                <option>Skryť zákazníkovi</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Zobrazenie v menu</span>
+              <select>
+                <option>Všetko</option>
+                <option>Zobraziť v menu</option>
+                <option>Skryť v menu</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Indexácia Google</span>
+              <select>
+                <option>Všetko</option>
+                <option>Indexovať</option>
+                <option>Noindex</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="products-toolbar">
+            <div class="toolbar-left">
+              <button class="secondary-btn" type="button">FUNKCIA</button>
+            </div>
+
+            <div class="toolbar-right">
+              <button class="secondary-btn" type="button">FILTER</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table categories-table">
+              <thead>
+                <tr>
+                  <th class="check-col"></th>
+                  <th>Kategória</th>
+                  <th>URL</th>
+                  <th>Typ</th>
+                  <th>Zákazník vidí</th>
+                  <th>V menu</th>
+                  <th>Google index</th>
+                  <th>Počet produktov</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Akrylátová vírivka</strong>
+                    <span>Hlavná kategória víriviek</span>
+                  </td>
+                  <td>/akrylatova-virivka</td>
+                  <td><span class="status status-done">Bežná</span></td>
+                  <td><span class="status status-done">Áno</span></td>
+                  <td><span class="status status-done">Áno</span></td>
+                  <td><span class="status status-done">Indexovať</span></td>
+                  <td>186</td>
+                  <td>
+                    <div class="actions">
+                      <a href="#" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Vírivka Bratislava</strong>
+                    <span>SEO landing kategória</span>
+                  </td>
+                  <td>/virivka-bratislava</td>
+                  <td><span class="status status-paid">SEO</span></td>
+                  <td><span class="status status-new">Nie</span></td>
+                  <td><span class="status status-new">Nie</span></td>
+                  <td><span class="status status-done">Indexovať</span></td>
+                  <td>24</td>
+                  <td>
+                    <div class="actions">
+                      <a href="#" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Luxusné vírivky</strong>
+                    <span>Výber prémiových modelov</span>
+                  </td>
+                  <td>/luxusne-virivky</td>
+                  <td><span class="status status-done">Bežná</span></td>
+                  <td><span class="status status-done">Áno</span></td>
+                  <td><span class="status status-done">Áno</span></td>
+                  <td><span class="status status-done">Indexovať</span></td>
+                  <td>57</td>
+                  <td>
+                    <div class="actions">
+                      <a href="#" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Vírivka Košice</strong>
+                    <span>SEO landing kategória</span>
+                  </td>
+                  <td>/virivka-kosice</td>
+                  <td><span class="status status-paid">SEO</span></td>
+                  <td><span class="status status-new">Nie</span></td>
+                  <td><span class="status status-new">Nie</span></td>
+                  <td><span class="status status-done">Indexovať</span></td>
+                  <td>18</td>
+                  <td>
+                    <div class="actions">
+                      <a href="#" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Doplnky a voliteľná výbava</strong>
+                    <span>Doplnky k vírivkám</span>
+                  </td>
+                  <td>/doplnky-k-virivkam</td>
+                  <td><span class="status status-done">Bežná</span></td>
+                  <td><span class="status status-done">Áno</span></td>
+                  <td><span class="status status-done">Áno</span></td>
+                  <td><span class="status status-done">Indexovať</span></td>
+                  <td>74</td>
+                  <td>
+                    <div class="actions">
+                      <a href="#" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="orders-footer">
+            <button class="secondary-btn" type="button">VIAC FUNKCIÍ</button>
+            <button class="primary-btn" type="button">PRIDAŤ KATEGÓRIU</button>
+          </div>
+        </section>
+
+        <section class="detail-form-grid">
+          <article class="panel">
+            <h2>Logika kategórií</h2>
+            <div class="history-list">
+              <div class="history-item">
+                <strong>Bežná kategória</strong>
+                <span>Zákazník ju môže vidieť, môže byť v menu a Google ju indexuje.</span>
+              </div>
+              <div class="history-item">
+                <strong>SEO kategória</strong>
+                <span>Môže byť skrytá pre zákazníka v menu, ale stále indexovaná pre Google.</span>
+              </div>
+              <div class="history-item">
+                <strong>Produkt v skrytej kategórii</strong>
+                <span>Produkt sa do kategórie pridáva normálne checkboxom, aj keď ju zákazník v menu nevidí.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Dôležité prepínače kategórie</h2>
+            <div class="check-list">
+              <label><input type="checkbox" checked /> Zobraziť zákazníkovi</label>
+              <label><input type="checkbox" checked /> Zobraziť v menu</label>
+              <label><input type="checkbox" checked /> Povoliť indexáciu Google</label>
+              <label><input type="checkbox" checked /> Povoliť produkty v kategórii</label>
+              <label><input type="checkbox" /> Noindex / iba interné použitie</label>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
