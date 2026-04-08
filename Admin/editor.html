@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Editor vzhľadu</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="customers.html">Zákazníci</a>
+        <a class="nav-item" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="title-page.html">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item active" href="editor.html">Editor / HTML</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať vzhľad, HTML kód alebo nastavenia" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Vzhľad a obsah</p>
+            <h1>Editor vzhľadu</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="order-tabs">
+            <button class="tab-btn active" type="button">Editor vzhľadu</button>
+            <button class="tab-btn" type="button">HTML kód</button>
+            <button class="tab-btn" type="button">Ďalšie nastavenia</button>
+          </div>
+
+          <div class="doc-card" style="margin-bottom: 18px;">
+            <div>
+              <strong>Upozornenie</strong>
+              <span>Vzhľadom k rozdielnym možnostiam jednotlivých šablón sa nemusia všetky nastavenia vzhľadu na konkrétnych šablónach vždy prejaviť.</span>
+            </div>
+          </div>
+
+          <div class="detail-form-grid">
+            <article class="panel inner-panel">
+              <h2>Farebnosť šablóny</h2>
+
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Konverzná farba</span>
+                  <input type="text" value="BE9770" />
+                </label>
+
+                <label class="form-field">
+                  <span>Konverzná farba pred kliknutím</span>
+                  <input type="text" value="B08253" />
+                </label>
+
+                <label class="form-field">
+                  <span>Farba šablóny 1</span>
+                  <input type="text" value="4FB7B9" />
+                </label>
+
+                <label class="form-field">
+                  <span>Farba šablóny 2</span>
+                  <input type="text" value="42A2A4" />
+                </label>
+
+                <label class="form-field">
+                  <span>Farba šablóny 3</span>
+                  <input type="text" value="E9E9E9" />
+                </label>
+
+                <label class="form-field">
+                  <span>Farba šablóny 4</span>
+                  <input type="text" value="E9E9E9" />
+                </label>
+              </div>
+            </article>
+
+            <article class="panel inner-panel">
+              <h2>Výber písma</h2>
+
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Font nadpisu</span>
+                  <select>
+                    <option selected>Poppins</option>
+                    <option>Arial</option>
+                    <option>Roboto</option>
+                    <option>Montserrat</option>
+                  </select>
+                </label>
+
+                <label class="form-field">
+                  <span>Font textu</span>
+                  <select>
+                    <option selected>Poppins</option>
+                    <option>Arial</option>
+                    <option>Roboto</option>
+                    <option>Montserrat</option>
+                  </select>
+                </label>
+              </div>
+            </article>
+          </div>
+
+          <section class="panel" style="margin-top: 18px;">
+            <h2>Záhlavie</h2>
+
+            <div class="detail-form-grid" style="margin-top: 14px;">
+              <article class="panel inner-panel">
+                <div class="gallery-item" style="min-height: 180px;">Náhľad loga / záhlavia</div>
+              </article>
+
+              <article class="panel inner-panel">
+                <div class="form-grid">
+                  <label class="form-field">
+                    <span>Logo</span>
+                    <input type="text" placeholder="Názov súboru loga alebo URL" value="logo-platinum-lech-spa.png" />
+                  </label>
+
+                  <div class="actions">
+                    <button class="secondary-btn" type="button">Nahrať</button>
+                    <button class="secondary-btn" type="button">Vymazať</button>
+                  </div>
+
+                  <label class="form-field">
+                    <span>Farba záhlavia</span>
+                    <input type="text" value="4FB7B9" />
+                  </label>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" style="margin-top: 18px;">
+            <h2>Pozadie</h2>
+
+            <div class="form-grid two-cols" style="margin-top: 14px;">
+              <label class="form-field">
+                <span>Zapnuté</span>
+                <select>
+                  <option selected>Áno</option>
+                  <option>Nie</option>
+                </select>
+              </label>
+
+              <label class="form-field">
+                <span>Použiť farbu do pozadia</span>
+                <input type="text" value="6BFDFF" />
+              </label>
+
+              <label class="form-field">
+                <span>Obrázok v pozadí</span>
+                <input type="text" placeholder="Názov súboru alebo URL obrázka" />
+              </label>
+
+              <div class="form-field">
+                <span>&nbsp;</span>
+                <button class="secondary-btn" type="button">Nahrať obrázok</button>
+              </div>
+
+              <label class="form-field">
+                <span>Priložiť pozadie</span>
+                <select>
+                  <option selected>Scrollovať so stránkou</option>
+                  <option>Pevne umiestnené na stránke</option>
+                </select>
+              </label>
+
+              <label class="form-field">
+                <span>Umiestnenie pozadia</span>
+                <select>
+                  <option selected>Vycentrované</option>
+                  <option>Opakujúce sa</option>
+                  <option>Vľavo hore</option>
+                  <option>Vpravo hore</option>
+                </select>
+              </label>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel" style="margin-top: 22px;">
+          <div class="panel-head">
+            <h2>HTML kód</h2>
+          </div>
+
+          <div class="doc-card" style="margin-bottom: 18px;">
+            <div>
+              <strong>Pozor</strong>
+              <span>Len pre pokročilých používateľov. Vkladaj len overený HTML, META, STYLE alebo SCRIPT kód.</span>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Záhlavie (pred uzatváracím tagom HEAD)</span>
+              <textarea rows="8" placeholder="Sem vlož HTML / META / STYLE / SCRIPT kód pre HEAD..."><script type="text/javascript">
+  setTimeout(function () {
+    window._smartsupp = window._smartsupp || {};
+    window._smartsupp.key = "9506c5511c7f75dc6e7cc8b5dbfb5fab9efe822f";
+
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.charset = "utf-8";
+    s.async = true;
+    s.src = "https://www.smartsuppchat.com/loader.js";
+    document.body.appendChild(s);
+  }, 20000);
+</script>
+
+<noscript>
+  Powered by <a href="https://www.smartsupp.com" target="_blank" rel="noopener noreferrer">Smartsupp</a>
+</noscript>
+
+<meta name="google-site-verification" content="xC7Ky6YgDoXTb5lKbm8JnfqZ8emuFOOiiTa8nDFJTG0" /></textarea>
+            </label>
+
+            <label class="form-field">
+              <span>Pätička (pred uzatváracím tagom BODY)</span>
+              <textarea rows="6" placeholder="Sem vlož javascript alebo iný kód pred koniec BODY..."></textarea>
+            </label>
+
+            <label class="form-field">
+              <span>Dokončená objednávka</span>
+              <textarea rows="5" placeholder="Sem vlož konverzný kód pre ďakovaciu stránku objednávky..."></textarea>
+            </label>
+
+            <label class="form-field">
+              <span>Robots.txt</span>
+              <textarea rows="5" placeholder="Sem vlož vlastné direktívy pre robots.txt..."></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top: 22px;">
+          <div class="panel-head">
+            <h2>Ďalšie nastavenia</h2>
+          </div>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Favicona</span>
+              <input type="text" placeholder="Názov súboru favicony alebo URL" />
+            </label>
+
+            <div class="form-field">
+              <span>&nbsp;</span>
+              <button class="secondary-btn" type="button">Nahrať faviconu</button>
+            </div>
+
+            <label class="form-field">
+              <span>Omrvinková navigácia</span>
+              <select>
+                <option selected>Zobraziť úvodnú stránku ikonou</option>
+                <option>Zobraziť úvodnú stránku textovo</option>
+                <option>Nezobrazovať</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Dĺžka zobrazenia jednej snímky carouselu (ms)</span>
+              <input type="number" value="5000" />
+            </label>
+
+            <label class="form-field">
+              <span>Informačný prúžok</span>
+              <textarea rows="4" placeholder="Krátky text informačného prúžku...">Virivkyonline.sk</textarea>
+            </label>
+
+            <label class="form-field">
+              <span>Upozornenia v košíku</span>
+              <textarea rows="6" placeholder="Text upozornení v košíku..."></textarea>
+            </label>
+
+            <label class="form-field">
+              <span>Titulok stránky 404</span>
+              <input type="text" value="Stránka nenájdená" />
+            </label>
+
+            <label class="form-field">
+              <span>Text stránky 404</span>
+              <textarea rows="6" placeholder="Obsah stránky 404..."></textarea>
+            </label>
+          </div>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Viac funkcií</button>
+          <button class="primary-btn" type="button">Uložiť</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+              </html>
