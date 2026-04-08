@@ -1,1 +1,281 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Produkty</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
 
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item active" href="products.html">Produkty</a>
+        <a class="nav-item" href="#">Zákazníci</a>
+        <a class="nav-item" href="#">Doklady</a>
+        <a class="nav-item" href="#">Kategórie</a>
+        <a class="nav-item" href="#">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item" href="#">Nastavenia</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="Hľadať objednávky, produkty alebo zákazníkov"
+            />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Produkty</p>
+            <h1>Prehľad produktov</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="products-filter-grid">
+            <label class="form-field">
+              <span>Kód</span>
+              <input type="text" placeholder="Kód produktu" />
+            </label>
+
+            <label class="form-field">
+              <span>Názov</span>
+              <input type="text" placeholder="Názov produktu" />
+            </label>
+
+            <label class="form-field">
+              <span>Kategória</span>
+              <select>
+                <option>Všetky kategórie</option>
+                <option>Vírivky</option>
+                <option>Doplnky</option>
+                <option>Chladiace kade</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Viditeľnosť</span>
+              <select>
+                <option>Všetko</option>
+                <option>Zobraziť produkt</option>
+                <option>Skrytý produkt</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Príznak</span>
+              <select>
+                <option>Všetky</option>
+                <option>Akcia</option>
+                <option>Novinka</option>
+                <option>Tip</option>
+                <option>Výpredaj</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Dostupnosť</span>
+              <select>
+                <option>Všetko</option>
+                <option>Skladom</option>
+                <option>Na objednávku</option>
+                <option>Vypredané</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="products-toolbar">
+            <div class="toolbar-left">
+              <button class="secondary-btn" type="button">FUNKCIA</button>
+            </div>
+
+            <div class="toolbar-right">
+              <button class="secondary-btn" type="button">FILTER</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table products-table">
+              <thead>
+                <tr>
+                  <th class="check-col"></th>
+                  <th>Produkt</th>
+                  <th>Cena</th>
+                  <th>Akcia</th>
+                  <th>Novinka</th>
+                  <th>Tip</th>
+                  <th>Viac farieb skladom</th>
+                  <th>Výpredaj</th>
+                  <th>Viditeľnosť</th>
+                  <th>Vek</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <div class="product-cell">
+                      <div class="product-thumb">IMG</div>
+                      <div>
+                        <strong>Vírivka SUN 200x160x90</strong>
+                        <span>3-miestna kompaktná vírivka</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>€5 800</td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td>&gt; 999</td>
+                  <td>
+                    <div class="actions">
+                      <a href="product-detail.html" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <div class="product-cell">
+                      <div class="product-thumb">IMG</div>
+                      <div>
+                        <strong>Vírivka New Maximus</strong>
+                        <span>Luxusný relax a moderný dizajn</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>€7 999</td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td>507</td>
+                  <td>
+                    <div class="actions">
+                      <a href="product-detail.html" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <div class="product-cell">
+                      <div class="product-thumb">IMG</div>
+                      <div>
+                        <strong>Vírivka SPLIT Extratherm</strong>
+                        <span>Energeticky efektívny model</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>€6 499</td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td>&gt; 999</td>
+                  <td>
+                    <div class="actions">
+                      <a href="product-detail.html" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <div class="product-cell">
+                      <div class="product-thumb">IMG</div>
+                      <div>
+                        <strong>Tepelné čerpadlo ZEALUX</strong>
+                        <span>Záruka 7 rokov</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>od €2 465</td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td>802</td>
+                  <td>
+                    <div class="actions">
+                      <a href="product-detail.html" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <div class="product-cell">
+                      <div class="product-thumb">IMG</div>
+                      <div>
+                        <strong>Schodíky Standard</strong>
+                        <span>Doplnok k vírivke</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>€180</td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-off"></span></td>
+                  <td><span class="dot dot-on"></span></td>
+                  <td>&gt; 999</td>
+                  <td>
+                    <div class="actions">
+                      <a href="product-detail.html" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="orders-footer">
+            <button class="secondary-btn" type="button">VIAC FUNKCIÍ</button>
+            <button class="primary-btn" type="button">PRIDAŤ PRODUKT</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
