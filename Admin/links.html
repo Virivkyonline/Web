@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Odkazy</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="customers.html">Zákazníci</a>
+        <a class="nav-item" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="title-page.html">Titulná strana</a>
+        <a class="nav-item" href="banners.html">Bannery</a>
+        <a class="nav-item" href="menu-settings.html">Menu webu</a>
+        <a class="nav-item active" href="links.html">Odkazy</a>
+        <a class="nav-item" href="editor.html">Editor / HTML</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať odkazy alebo URL adresy" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Vzhľad a obsah</p>
+            <h1>Odkazy</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Správa odkazov</h2>
+            <button class="secondary-btn" type="button">Pridať odkaz</button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Poradie</th>
+                  <th>Názov odkazu</th>
+                  <th>URL</th>
+                  <th>Typ</th>
+                  <th>Viditeľnosť</th>
+                  <th>Cieľ</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>
+                    <strong>Facebook</strong>
+                    <span>Sociálna sieť</span>
+                  </td>
+                  <td>https://facebook.com/virivkyonline</td>
+                  <td><span class="status status-done">Externý</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>Nové okno</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2.</td>
+                  <td>
+                    <strong>Kontakt</strong>
+                    <span>Interná stránka webu</span>
+                  </td>
+                  <td>/kontakt</td>
+                  <td><span class="status status-paid">Interný</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>Rovnaké okno</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3.</td>
+                  <td>
+                    <strong>Akciové vírivky</strong>
+                    <span>Promo landing</span>
+                  </td>
+                  <td>/akcie</td>
+                  <td><span class="status status-work">Landing</span></td>
+                  <td><span class="status status-done">Zobraziť</span></td>
+                  <td>Rovnaké okno</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4.</td>
+                  <td>
+                    <strong>YouTube</strong>
+                    <span>Video prezentácie</span>
+                  </td>
+                  <td>https://youtube.com/</td>
+                  <td><span class="status status-done">Externý</span></td>
+                  <td><span class="status status-work">Pripravené</span></td>
+                  <td>Nové okno</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Upraviť</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="detail-form-grid" style="margin-top: 18px;">
+          <article class="panel">
+            <h2>Detail odkazu</h2>
+
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Názov odkazu</span>
+                <input type="text" value="Facebook" />
+              </label>
+
+              <label class="form-field">
+                <span>URL adresa</span>
+                <input type="text" value="https://facebook.com/virivkyonline" />
+              </label>
+
+              <div class="form-grid two-cols">
+                <label class="form-field">
+                  <span>Typ odkazu</span>
+                  <select>
+                    <option>Interný</option>
+                    <option selected>Externý</option>
+                    <option>Landing page</option>
+                    <option>Dokument</option>
+                  </select>
+                </label>
+
+                <label class="form-field">
+                  <span>Poradie</span>
+                  <input type="number" value="1" />
+                </label>
+
+                <label class="form-field">
+                  <span>Viditeľnosť</span>
+                  <select>
+                    <option selected>Zobraziť</option>
+                    <option>Skryť</option>
+                  </select>
+                </label>
+
+                <label class="form-field">
+                  <span>Cieľ odkazu</span>
+                  <select>
+                    <option>Rovnaké okno</option>
+                    <option selected>Nové okno</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="form-field">
+                <span>Interná poznámka</span>
+                <textarea rows="4" placeholder="Interná poznámka k odkazu...">Odkaz na firemný Facebook profil.</textarea>
+              </label>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Nastavenie zobrazenia</h2>
+
+            <div class="check-list">
+              <label><input type="checkbox" checked /> Zobraziť na webe</label>
+              <label><input type="checkbox" checked /> Zobraziť v pätičke</label>
+              <label><input type="checkbox" /> Zobraziť v hlavnom menu</label>
+              <label><input type="checkbox" checked /> Otvoriť v novom okne</label>
+              <label><input type="checkbox" /> Označiť ako zvýraznený odkaz</label>
+            </div>
+
+            <div class="form-grid" style="margin-top: 18px;">
+              <label class="form-field">
+                <span>Ikona / CSS trieda</span>
+                <input type="text" placeholder="napr. icon-facebook" />
+              </label>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel" style="margin-top: 18px;">
+          <div class="panel-head">
+            <h2>Rýchle odkazy</h2>
+            <button class="secondary-btn" type="button">Pridať rýchly odkaz</button>
+          </div>
+
+          <div class="docs-grid">
+            <div class="doc-card">
+              <div>
+                <strong>Kontakt</strong>
+                <span>Zobraziť v pätičke a na titulnej stránke</span>
+              </div>
+              <div class="doc-actions">
+                <button class="action-icon-btn" type="button">Upraviť</button>
+              </div>
+            </div>
+
+            <div class="doc-card">
+              <div>
+                <strong>Facebook</strong>
+                <span>Externý odkaz, nové okno</span>
+              </div>
+              <div class="doc-actions">
+                <button class="action-icon-btn" type="button">Upraviť</button>
+              </div>
+            </div>
+
+            <div class="doc-card">
+              <div>
+                <strong>YouTube</strong>
+                <span>Video galéria a prezentácie</span>
+              </div>
+              <div class="doc-actions">
+                <button class="action-icon-btn" type="button">Upraviť</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Viac funkcií</button>
+          <button class="primary-btn" type="button">Uložiť</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
