@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Detail objednávky</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
 
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item active" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="#">Zákazníci</a>
+        <a class="nav-item" href="#">Doklady</a>
+        <a class="nav-item" href="#">Kategórie</a>
+        <a class="nav-item" href="#">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item" href="#">Nastavenia</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="Hľadať objednávky, produkty alebo zákazníkov"
+            />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header order-detail-head">
+          <div>
+            <p class="eyebrow">Objednávky</p>
+            <h1>Objednávka 2026000032</h1>
+            <p class="detail-subtitle">26.2.2026 16:18:38</p>
+          </div>
+
+          <div class="detail-head-actions">
+            <a href="orders.html" class="secondary-btn">Späť na objednávky</a>
+          </div>
+        </section>
+
+        <section class="detail-grid">
+          <article class="panel detail-card">
+            <h2>Kontakt na zákazníka</h2>
+            <div class="info-list">
+              <div><strong>Milan Bajbak</strong></div>
+              <div>MIBA SK sro</div>
+              <div>Email: babjakmilan1@gmail.com</div>
+              <div>Telefón: +421 911 449 670</div>
+            </div>
+          </article>
+
+          <article class="panel detail-card">
+            <h2>Fakturačná adresa</h2>
+            <div class="info-list">
+              <div><strong>Milan Bajbak</strong></div>
+              <div>MIBA SK sro</div>
+              <div>Továrenská ul 44</div>
+              <div>97631 Vlkanová</div>
+              <div>Slovensko</div>
+              <div>IČO: 36623041</div>
+              <div>IČ DPH: SK2021775624</div>
+            </div>
+          </article>
+
+          <article class="panel detail-card">
+            <h2>Doručovacia adresa</h2>
+            <div class="info-list">
+              <div>Rovnaká ako fakturačná</div>
+            </div>
+          </article>
+        </section>
+
+        <section class="detail-form-grid">
+          <article class="panel">
+            <h2>Stav a platba</h2>
+
+            <div class="form-grid two-cols">
+              <label class="form-field">
+                <span>Stav objednávky</span>
+                <select class="status-select">
+                  <option>Prijatá objednávka</option>
+                  <option>Na objednávke sa pracuje</option>
+                  <option>Poslaná zálohová faktúra</option>
+                  <option selected>Uhradená záloha</option>
+                  <option>Vybavená</option>
+                  <option>Stornovaná</option>
+                </select>
+              </label>
+
+              <label class="form-field">
+                <span>Forma úhrady</span>
+                <input type="text" value="Prevodom" />
+              </label>
+
+              <label class="form-field">
+                <span>Zdroj</span>
+                <input type="text" value="E-shop" />
+              </label>
+
+              <label class="form-field">
+                <span>Predajný kanál</span>
+                <input type="text" value="E-shop" />
+              </label>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Platobná logika</h2>
+
+            <div class="payment-summary">
+              <div class="payment-row">
+                <span>Cena spolu</span>
+                <strong>€7 999,00</strong>
+              </div>
+              <div class="payment-row">
+                <span>Požadovaná záloha</span>
+                <strong>€500,00</strong>
+              </div>
+              <div class="payment-row">
+                <span>Stav zálohy</span>
+                <strong class="text-success">Uhradená</strong>
+              </div>
+              <div class="payment-row">
+                <span>Dátum odoslania zálohovej faktúry</span>
+                <strong>27.2.2026</strong>
+              </div>
+              <div class="payment-row">
+                <span>Dátum úhrady zálohy</span>
+                <strong>1.3.2026</strong>
+              </div>
+              <div class="payment-row total-row">
+                <span>Zostáva doplatiť</span>
+                <strong>€7 499,00</strong>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Položky objednávky</h2>
+            <button class="secondary-btn" type="button">Pridať položku</button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Kód</th>
+                  <th>Popis položky</th>
+                  <th>Stav</th>
+                  <th>Mn.</th>
+                  <th>Cena za m. j.</th>
+                  <th>DPH</th>
+                  <th>Spolu vrátane DPH</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>21/SED9</strong></td>
+                  <td>
+                    <strong>Vírivka SUN 200x160x90</strong>
+                    <span>Variant: ŠEDÁ / Gypsum</span><br />
+                    <span>Farba akrylu: ŠEDÁ</span><br />
+                    <span>Farba obloženia a schodíkov: rovnaká</span>
+                  </td>
+                  <td><span class="status status-paid">Uhradená záloha</span></td>
+                  <td>1 ks</td>
+                  <td>€7 999,00</td>
+                  <td>23 %</td>
+                  <td>€7 999,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="detail-form-grid">
+          <article class="panel">
+            <h2>Doklady</h2>
+
+            <div class="docs-grid">
+              <div class="doc-card">
+                <div>
+                  <strong>Zálohová faktúra</strong>
+                  <span>ZP20240017</span>
+                </div>
+                <div class="doc-actions">
+                  <button class="action-icon-btn" type="button">PDF</button>
+                  <button class="action-icon-btn" type="button">Odoslať</button>
+                </div>
+              </div>
+
+              <div class="doc-card">
+                <div>
+                  <strong>Doklad k prijatej platbe</strong>
+                  <span>DPP20260001</span>
+                </div>
+                <div class="doc-actions">
+                  <button class="action-icon-btn" type="button">PDF</button>
+                  <button class="action-icon-btn" type="button">Odoslať</button>
+                </div>
+              </div>
+
+              <div class="doc-card">
+                <div>
+                  <strong>Finálna faktúra</strong>
+                  <span>Zatiaľ nevytvorená</span>
+                </div>
+                <div class="doc-actions">
+                  <button class="action-icon-btn" type="button">Vytvoriť</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Interná poznámka obchodníka</h2>
+            <label class="form-field">
+              <span>Poznámka</span>
+              <textarea rows="10" placeholder="Sem si zapisuj interné informácie k zákazke..."></textarea>
+            </label>
+          </article>
+        </section>
+
+        <section class="panel">
+          <h2>História objednávky</h2>
+
+          <div class="history-list">
+            <div class="history-item">
+              <strong>Prijatá objednávka</strong>
+              <span>26.2.2026 16:18</span>
+            </div>
+            <div class="history-item">
+              <strong>Na objednávke sa pracuje</strong>
+              <span>27.2.2026 09:10</span>
+            </div>
+            <div class="history-item">
+              <strong>Poslaná zálohová faktúra</strong>
+              <span>27.2.2026 09:14</span>
+            </div>
+            <div class="history-item">
+              <strong>Uhradená záloha</strong>
+              <span>1.3.2026 11:42</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Viac funkcií</button>
+          <button class="primary-btn" type="button">Uložiť</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
