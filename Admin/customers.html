@@ -1,1 +1,318 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Zákazníci</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
 
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item active" href="customers.html">Zákazníci</a>
+        <a class="nav-item" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="#">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item" href="#">Nastavenia</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať zákazníkov, email alebo telefón" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Zákazníci</p>
+            <h1>Prehľad zákazníkov</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="products-filter-grid">
+            <label class="form-field">
+              <span>Meno / firma</span>
+              <input type="text" placeholder="Meno alebo názov firmy" />
+            </label>
+
+            <label class="form-field">
+              <span>Email / telefón</span>
+              <input type="text" placeholder="Email alebo telefón" />
+            </label>
+
+            <label class="form-field">
+              <span>Typ zákazníka</span>
+              <select>
+                <option>Všetci</option>
+                <option>Bežný</option>
+                <option>VIP</option>
+                <option>Veľkoobchod</option>
+                <option>Bez objednávky</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Počet objednávok</span>
+              <select>
+                <option>Všetko</option>
+                <option>0</option>
+                <option>1 - 2</option>
+                <option>3 - 5</option>
+                <option>6+</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Posledná objednávka</span>
+              <select>
+                <option>Kedykoľvek</option>
+                <option>Za posledných 30 dní</option>
+                <option>Za posledných 90 dní</option>
+                <option>Za posledný rok</option>
+                <option>Bez objednávky</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Hodnota nákupov</span>
+              <select>
+                <option>Všetko</option>
+                <option>Do €500</option>
+                <option>€500 - €2 000</option>
+                <option>€2 000 - €10 000</option>
+                <option>Nad €10 000</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="products-toolbar">
+            <div class="toolbar-left">
+              <button class="secondary-btn" type="button">FUNKCIA</button>
+            </div>
+
+            <div class="toolbar-right">
+              <button class="secondary-btn" type="button">FILTER</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th class="check-col"></th>
+                  <th>Zákazník</th>
+                  <th>Kontakt</th>
+                  <th>Typ</th>
+                  <th>Objednávky</th>
+                  <th>Hodnota nákupov</th>
+                  <th>Posledná objednávka</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Milan Bajbak</strong>
+                    <span>MIBA SK sro</span>
+                  </td>
+                  <td>
+                    <strong>babjakmilan1@gmail.com</strong>
+                    <span>+421 911 449 670</span>
+                  </td>
+                  <td><span class="status status-paid">VIP</span></td>
+                  <td>3</td>
+                  <td>€15 998</td>
+                  <td>26.2.2026</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Detail</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Marek Duchoň</strong>
+                    <span>KK - SOLARTECH s. r. o.</span>
+                  </td>
+                  <td>
+                    <strong>marek@example.sk</strong>
+                    <span>+421 905 333 222</span>
+                  </td>
+                  <td><span class="status status-done">Veľkoobchod</span></td>
+                  <td>8</td>
+                  <td>€28 430</td>
+                  <td>7.4.2026</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Detail</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Ivan Cintula</strong>
+                    <span>IC Express s. r. o.</span>
+                  </td>
+                  <td>
+                    <strong>ivan@example.sk</strong>
+                    <span>+421 907 111 999</span>
+                  </td>
+                  <td><span class="status status-work">Bežný</span></td>
+                  <td>1</td>
+                  <td>€2 599</td>
+                  <td>1.4.2026</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Detail</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Jozef Beňuška</strong>
+                    <span>Súkromná osoba</span>
+                  </td>
+                  <td>
+                    <strong>jozef@example.sk</strong>
+                    <span>+421 915 222 444</span>
+                  </td>
+                  <td><span class="status status-new">Bez objednávky</span></td>
+                  <td>0</td>
+                  <td>€0</td>
+                  <td>-</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Detail</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <strong>Ľubomír Oravec</strong>
+                    <span>Súkromná osoba</span>
+                  </td>
+                  <td>
+                    <strong>lubomir@example.sk</strong>
+                    <span>+421 903 777 666</span>
+                  </td>
+                  <td><span class="status status-work">Bežný</span></td>
+                  <td>2</td>
+                  <td>€1 240</td>
+                  <td>14.12.2025</td>
+                  <td>
+                    <div class="actions">
+                      <button class="action-btn" type="button">Detail</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="detail-form-grid" style="margin-top: 18px;">
+          <article class="panel">
+            <h2>Hromadný info mail</h2>
+
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Komu poslať</span>
+                <select>
+                  <option selected>Vybraným zákazníkom</option>
+                  <option>Všetkým podľa aktuálneho filtra</option>
+                  <option>Všetkým zákazníkom</option>
+                  <option>Len VIP</option>
+                  <option>Len veľkoobchod</option>
+                  <option>Len bez objednávky</option>
+                </select>
+              </label>
+
+              <label class="form-field">
+                <span>Predmet emailu</span>
+                <input type="text" value="Novinky a dôležité informácie od Platinum Lech Spa" />
+              </label>
+
+              <label class="form-field">
+                <span>Text správy</span>
+                <textarea rows="10" placeholder="Sem napíš text info mailu...">Dobrý deň,
+
+pripravili sme pre Vás nové informácie, akcie a novinky z ponuky Platinum Lech Spa.
+
+V prípade záujmu nás neváhajte kontaktovať.
+
+S pozdravom
+Platinum Lech Spa</textarea>
+              </label>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Sumár rozosielky</h2>
+
+            <div class="payment-summary">
+              <div class="payment-row">
+                <span>Vybraní zákazníci</span>
+                <strong>5</strong>
+              </div>
+              <div class="payment-row">
+                <span>S filtrom „VIP“</span>
+                <strong>1</strong>
+              </div>
+              <div class="payment-row">
+                <span>S filtrom „Veľkoobchod“</span>
+                <strong>1</strong>
+              </div>
+              <div class="payment-row">
+                <span>Bez objednávky</span>
+                <strong>1</strong>
+              </div>
+              <div class="payment-row total-row">
+                <span>Počet príjemcov</span>
+                <strong>5</strong>
+              </div>
+            </div>
+
+            <div style="margin-top: 18px;" class="form-grid">
+              <button class="secondary-btn" type="button">Uložiť ako koncept</button>
+              <button class="primary-btn" type="button">Odoslať info mail</button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
