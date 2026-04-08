@@ -19,7 +19,7 @@
         <a class="nav-item" href="products.html">Produkty</a>
         <a class="nav-item" href="#">Zákazníci</a>
         <a class="nav-item" href="#">Doklady</a>
-        <a class="nav-item" href="#">Kategórie</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
         <a class="nav-item" href="#">Titulná strana</a>
         <a class="nav-item" href="#">Import / Export</a>
         <a class="nav-item" href="#">Nastavenia</a>
@@ -109,7 +109,11 @@
 
               <label class="form-field">
                 <span>Forma úhrady</span>
-                <input type="text" value="Prevodom" />
+                <select>
+                  <option selected>Prevodom</option>
+                  <option>V hotovosti</option>
+                  <option>Kartou</option>
+                </select>
               </label>
 
               <label class="form-field">
@@ -125,6 +129,39 @@
           </article>
 
           <article class="panel">
+            <h2>Automatická akcia po zmene stavu</h2>
+
+            <div class="history-list">
+              <div class="history-item">
+                <strong>Prijatá objednávka → Na objednávke sa pracuje</strong>
+                <span>Pošle sa potvrdenie objednávky zákazníkovi.</span>
+              </div>
+
+              <div class="history-item">
+                <strong>Na objednávke sa pracuje → Poslaná zálohová faktúra</strong>
+                <span>Pošle sa výzva na zaplatenie zálohy a zálohová faktúra.</span>
+              </div>
+
+              <div class="history-item">
+                <strong>Poslaná zálohová faktúra → Uhradená záloha</strong>
+                <span>Pošle sa potvrdenie prijatej platby a doklad k prijatej platbe.</span>
+              </div>
+
+              <div class="history-item">
+                <strong>Uhradená záloha → Vybavená</strong>
+                <span>Pošle sa finálna faktúra a objednávka sa uzavrie.</span>
+              </div>
+
+              <div class="history-item">
+                <strong>Stornovaná</strong>
+                <span>Zastaví sa ďalšia automatická komunikácia a objednávka sa uzavrie ako storno.</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="detail-form-grid">
+          <article class="panel">
             <h2>Platobná logika</h2>
 
             <div class="payment-summary">
@@ -132,25 +169,53 @@
                 <span>Cena spolu</span>
                 <strong>€7 999,00</strong>
               </div>
+
               <div class="payment-row">
                 <span>Požadovaná záloha</span>
                 <strong>€500,00</strong>
               </div>
+
               <div class="payment-row">
                 <span>Stav zálohy</span>
                 <strong class="text-success">Uhradená</strong>
               </div>
+
               <div class="payment-row">
                 <span>Dátum odoslania zálohovej faktúry</span>
                 <strong>27.2.2026</strong>
               </div>
+
               <div class="payment-row">
                 <span>Dátum úhrady zálohy</span>
                 <strong>1.3.2026</strong>
               </div>
+
               <div class="payment-row total-row">
                 <span>Zostáva doplatiť</span>
                 <strong>€7 499,00</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Interná logika objednávky</h2>
+
+            <div class="history-list">
+              <div class="history-item">
+                <strong>Typ produktu</strong>
+                <span>Vírivka skladová</span>
+              </div>
+              <div class="history-item">
+                <strong>Doprava a montáž</strong>
+                <span>Povinná súčasť objednávky</span>
+              </div>
+              <div class="history-item">
+                <strong>Zálohový režim</strong>
+                <span>500 € pri bežnej vírivke</span>
+              </div>
+              <div class="history-item">
+                <strong>Individuálna konfigurácia</strong>
+                <span>Nie</span>
               </div>
             </div>
           </article>
@@ -238,7 +303,7 @@
             <h2>Interná poznámka obchodníka</h2>
             <label class="form-field">
               <span>Poznámka</span>
-              <textarea rows="10" placeholder="Sem si zapisuj interné informácie k zákazke..."></textarea>
+              <textarea rows="10" placeholder="Sem si zapisuj interné informácie k zákazke, termínu montáže, detailom dopravy, požiadavkám klienta a podobne..."></textarea>
             </label>
           </article>
         </section>
