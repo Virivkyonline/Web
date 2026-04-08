@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Základný prehľad</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
 
+      <nav class="sidebar-nav">
+        <a class="nav-item active" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="#">Zákazníci</a>
+        <a class="nav-item" href="#">Doklady</a>
+        <a class="nav-item" href="#">Kategórie</a>
+        <a class="nav-item" href="#">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item" href="#">Nastavenia</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="Hľadať objednávky, produkty alebo zákazníkov"
+            />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Admin</p>
+            <h1>Základný prehľad</h1>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card active-stat">
+            <span class="stat-label">Dnes</span>
+            <strong class="stat-value">€0</strong>
+            <span class="stat-sub">0 objednávok</span>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-label">24 hodín</span>
+            <strong class="stat-value">€156</strong>
+            <span class="stat-sub">2 objednávky</span>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-label">Týždeň</span>
+            <strong class="stat-value">€12 329</strong>
+            <span class="stat-sub">10 objednávok</span>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-label">Mesiac</span>
+            <strong class="stat-value">€74 965</strong>
+            <span class="stat-sub">30 objednávok</span>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-label">Rok</span>
+            <strong class="stat-value">€421 092</strong>
+            <span class="stat-sub">205 objednávok</span>
+          </article>
+        </section>
+
+        <section class="charts-grid">
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h2>Dnešné predaje</h2>
+            </div>
+            <div class="chart-placeholder">
+              <div class="fake-line"></div>
+              <div class="chart-legend">
+                <div><strong>Predaj</strong><span>€0</span></div>
+                <div><strong>Objednávky</strong><span>0</span></div>
+                <div><strong>Marža</strong><span>€0</span></div>
+                <div><strong>Návštevy</strong><span>0</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h2>Dnešné objednávky</h2>
+            </div>
+            <div class="chart-placeholder">
+              <div class="fake-line alt"></div>
+              <div class="chart-legend">
+                <div><strong>Prijaté</strong><span>0</span></div>
+                <div><strong>Na spracovaní</strong><span>0</span></div>
+                <div><strong>Uhradené zálohy</strong><span>0</span></div>
+                <div><strong>Vybavené</strong><span>0</span></div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel orders-panel">
+          <div class="panel-head">
+            <h2>Nedávne objednávky</h2>
+            <a href="orders.html" class="panel-link">Zobraziť všetko</a>
+          </div>
+
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Kód a dátum</th>
+                  <th>Meno a priezvisko</th>
+                  <th>Spôsob dopravy</th>
+                  <th>Platba</th>
+                  <th>Stav</th>
+                  <th>Cena</th>
+                  <th>Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>2026000067</strong>
+                    <span>7.4.2026 13:46</span>
+                  </td>
+                  <td>
+                    <strong>Marek Duchoň</strong>
+                    <span>KK - SOLARTECH s. r. o.</span>
+                  </td>
+                  <td>Packeta Z-Point</td>
+                  <td>Prevodom vopred na účet</td>
+                  <td><span class="status status-new">Nevybavená</span></td>
+                  <td>€103,40</td>
+                  <td>
+                    <div class="actions">
+                      <a href="detail.html" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong>2026000062</strong>
+                    <span>1.4.2026 19:48</span>
+                  </td>
+                  <td>
+                    <strong>Ivan Cintula</strong>
+                    <span>IC Express s. r. o.</span>
+                  </td>
+                  <td>Zadarmo pri objednaní vírivky</td>
+                  <td>Prevodom (záloha 500€ a doplatok)</td>
+                  <td><span class="status status-work">Na objednávke sa pracuje</span></td>
+                  <td>€2 599</td>
+                  <td>
+                    <div class="actions">
+                      <a href="detail.html" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong>2026000032</strong>
+                    <span>26.2.2026 16:18</span>
+                  </td>
+                  <td>
+                    <strong>Milan Bajbak</strong>
+                    <span>MIBA SK sro</span>
+                  </td>
+                  <td>Zadarmo pri objednaní vírivky</td>
+                  <td>Prevodom (záloha 500€ a doplatok)</td>
+                  <td><span class="status status-paid">Uhradená záloha</span></td>
+                  <td>€7 999</td>
+                  <td>
+                    <div class="actions">
+                      <a href="detail.html" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong>2025000097</strong>
+                    <span>4.7.2025 15:40</span>
+                  </td>
+                  <td>
+                    <strong>Jozef Beňuška</strong>
+                    <span></span>
+                  </td>
+                  <td>Zadarmo pri objednaní vírivky</td>
+                  <td>Prevodom (záloha 500€ a doplatok)</td>
+                  <td><span class="status status-done">Vybavená</span></td>
+                  <td>€7 999</td>
+                  <td>
+                    <div class="actions">
+                      <a href="detail.html" class="action-btn">Detail</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
