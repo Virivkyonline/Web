@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Doklady</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item" href="products.html">Produkty</a>
+        <a class="nav-item" href="#">Zákazníci</a>
+        <a class="nav-item active" href="documents.html">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="#">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item" href="#">Nastavenia</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať objednávky, produkty alebo zákazníkov" />
+            <button type="button">Hľadať</button>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-header">
+          <div>
+            <p class="eyebrow">Nastavenia / Objednávky</p>
+            <h1>Doklady</h1>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Objednávky</h2>
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Predpona</span>
+              <input type="text" value="%YYYY%" />
+            </label>
+
+            <label class="form-field">
+              <span>Tvorba číslovania</span>
+              <select>
+                <option selected>číselný rad</option>
+                <option>samostatné číslovanie</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Počet znakov</span>
+              <select>
+                <option selected>10</option>
+                <option>8</option>
+                <option>12</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Začať od</span>
+              <input type="number" value="1" />
+            </label>
+          </div>
+
+          <div class="check-list" style="margin-top:18px;">
+            <label><input type="checkbox" checked /> Synchronizovať doklady s objednávkou</label>
+            <label><input type="checkbox" checked /> Uvádzať poznámky k položkám</label>
+          </div>
+
+          <div class="form-grid" style="margin-top:18px;">
+            <label class="form-field">
+              <span>Prepísať do poznámky tieto parametre</span>
+              <input type="text" placeholder="napr. farba, materiál" />
+            </label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Zálohové faktúry</h2>
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Predpona</span>
+              <input type="text" value="%YYYY%" />
+            </label>
+
+            <label class="form-field">
+              <span>Počet znakov</span>
+              <select>
+                <option selected>10</option>
+                <option>8</option>
+                <option>12</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Začať od</span>
+              <input type="number" value="1" />
+            </label>
+
+            <label class="form-field">
+              <span>Výška zálohy v %</span>
+              <input type="number" value="100" />
+            </label>
+          </div>
+
+          <div class="check-list" style="margin-top:18px;">
+            <label><input type="checkbox" checked /> Zjednotiť číslo dokladu a VS s objednávkou</label>
+            <label><input type="checkbox" checked /> Zjednotiť VS s objednávkou</label>
+            <label><input type="checkbox" checked /> Uvádzať poznámky k položkám</label>
+            <label><input type="checkbox" /> Prepísať na dokument poznámky z objednávky</label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Daňové doklady</h2>
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Predpona</span>
+              <input type="text" value="%YYYY%" />
+            </label>
+
+            <label class="form-field">
+              <span>Počet znakov</span>
+              <select>
+                <option selected>10</option>
+                <option>8</option>
+                <option>12</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Začať od</span>
+              <input type="number" value="1" />
+            </label>
+
+            <label class="form-field">
+              <span>Použiť špeciálny rad dokladov pre Pokladňu</span>
+              <select>
+                <option selected>Nie</option>
+                <option>Áno</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="check-list" style="margin-top:18px;">
+            <label><input type="checkbox" checked /> Zjednotiť číslo dokladu a VS s objednávkou</label>
+            <label><input type="checkbox" checked /> Zjednotiť VS s objednávkou</label>
+            <label><input type="checkbox" /> Zobrazovať záruku</label>
+            <label><input type="checkbox" checked /> Uvádzať poznámky k položkám</label>
+            <label><input type="checkbox" /> Pridať EAN do poznámky</label>
+            <label><input type="checkbox" /> Prepísať na dokument poznámky z objednávky</label>
+            <label><input type="checkbox" checked /> Zobrazovať nápis „Neplaťte“</label>
+            <label><input type="checkbox" checked /> Zobraziť cenu pred započítaním zliav</label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Dobropisy</h2>
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Predpona</span>
+              <input type="text" />
+            </label>
+
+            <label class="form-field">
+              <span>Počet znakov</span>
+              <select>
+                <option selected>10</option>
+                <option>8</option>
+                <option>12</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Začať od</span>
+              <input type="number" value="1" />
+            </label>
+
+            <label class="form-field">
+              <span>Predvolený dôvod opravy daňového dokladu</span>
+              <input type="text" value="Zrušenie objednávky" />
+            </label>
+          </div>
+
+          <div class="check-list" style="margin-top:18px;">
+            <label><input type="checkbox" /> Zjednotiť číslo dokladu a VS s objednávkou</label>
+            <label><input type="checkbox" checked /> Uveďte rozdiel medzi opraveným a pôvodným dokumentom</label>
+            <label><input type="checkbox" /> Uvádzať poznámky k položkám</label>
+            <label><input type="checkbox" /> Automaticky naskladniť položky</label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Nastavenie generovania DUZP</h2>
+          <div class="check-list">
+            <label><input type="radio" name="duzp" /> DUZP dobropisu je deň jeho vystavenia</label>
+            <label><input type="radio" name="duzp" checked /> DUZP dobropisu je zhodný s dátumom vystavenia dobropisovanej faktúry</label>
+          </div>
+
+          <h2 style="margin-top:26px;">Do dobropisu nezahrnúť tieto položky</h2>
+          <div class="check-list">
+            <label><input type="checkbox" /> Doprava</label>
+            <label><input type="checkbox" /> Platba</label>
+            <label><input type="checkbox" /> Darček</label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Dodacie listy</h2>
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Predpona</span>
+              <input type="text" />
+            </label>
+
+            <label class="form-field">
+              <span>Počet znakov</span>
+              <select>
+                <option selected>10</option>
+                <option>8</option>
+                <option>12</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Začať od</span>
+              <input type="number" value="1" />
+            </label>
+          </div>
+
+          <div class="check-list" style="margin-top:18px;">
+            <label><input type="checkbox" /> Zjednotiť číslo dokladu a VS s objednávkou</label>
+            <label><input type="checkbox" /> Uvádzať poznámky k položkám</label>
+            <label><input type="checkbox" /> Tlač čiarového kódu (EAN) pre položky</label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Doklady k prijatej platbe</h2>
+          <div class="check-list">
+            <label><input type="radio" name="platba_cislovanie" /> Postupné číslovanie</label>
+            <label><input type="radio" name="platba_cislovanie" checked /> Číslovanie podľa prepojených dokumentov</label>
+            <label><input type="checkbox" /> Vystaviť doklad automaticky pri prijatí platby</label>
+          </div>
+
+          <div class="form-grid two-cols" style="margin-top:18px;">
+            <label class="form-field">
+              <span>Predčíslie pre daňové doklady vzťahujúce sa k objednávkam</span>
+              <input type="text" value="VIR-" />
+            </label>
+
+            <label class="form-field">
+              <span>Predčíslie pre daňové doklady vzťahujúce sa k zálohovým faktúram</span>
+              <input type="text" value="ZAL-" />
+            </label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Exportovať doklady</h2>
+          <h2 style="margin-top:24px;">Formát ISDOC</h2>
+          <div class="check-list">
+            <label><input type="checkbox" /> Používať formát ISDOC</label>
+          </div>
+
+          <h2 style="margin-top:24px;">Money S3</h2>
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Predkontácia</span>
+              <input type="text" />
+            </label>
+
+            <label class="form-field">
+              <span>Účet</span>
+              <input type="text" />
+            </label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Štandardné nastavenie</h2>
+          <p class="detail-subtitle">Nasledujúce nastavenia sa prejavia vo všetkých dokladoch. V detaile dokladu môžete tieto údaje zmeniť ručne.</p>
+
+          <div class="form-grid two-cols" style="margin-top:18px;">
+            <label class="form-field">
+              <span>Forma úhrady</span>
+              <select>
+                <option selected>Prevodom</option>
+                <option>Hotovosť</option>
+                <option>Kartou</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Konštantný symbol</span>
+              <input type="text" />
+            </label>
+
+            <label class="form-field">
+              <span>Špecifický symbol</span>
+              <input type="text" />
+            </label>
+
+            <label class="form-field">
+              <span>Predvolený dátum splatnosti faktúry</span>
+              <input type="number" value="0" />
+            </label>
+
+            <label class="form-field">
+              <span>Predvolená splatnosť pre skupinu Koncový zákazník</span>
+              <input type="number" />
+            </label>
+
+            <label class="form-field">
+              <span>Predvolená splatnosť pre skupinu Veľkoobchodný odberateľ</span>
+              <input type="number" />
+            </label>
+
+            <label class="form-field">
+              <span>Poznámka k faktúre</span>
+              <textarea rows="4"></textarea>
+            </label>
+
+            <label class="form-field">
+              <span>Poznámka k zálohovej faktúre</span>
+              <textarea rows="4"></textarea>
+            </label>
+
+            <label class="form-field">
+              <span>QR kód</span>
+              <select>
+                <option selected>Zobraziť</option>
+                <option>Nezobraziť</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span>Radiť položky v dokladoch</span>
+              <select>
+                <option selected>Podľa názvu produktu</option>
+                <option>Podľa poradia v objednávke</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="check-list" style="margin-top:18px;">
+            <label><input type="checkbox" checked /> Zobraziť čiarový kód</label>
+            <label><input type="checkbox" checked /> Uveďte na dokumentoch kontaktnú osobu dodávateľa</label>
+            <label><input type="checkbox" checked /> Uveďte na dokumentoch kontaktnú osobu príjemcu</label>
+          </div>
+        </section>
+
+        <section class="detail-form-grid">
+          <article class="panel">
+            <h2>Logo</h2>
+            <div class="gallery-grid">
+              <div class="gallery-item">Logo spoločnosti</div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Pečiatka spoločnosti</h2>
+            <div class="gallery-grid">
+              <div class="gallery-item">Pečiatka</div>
+            </div>
+
+            <div class="form-grid two-cols" style="margin-top:18px;">
+              <label class="form-field">
+                <span>Upravenie radu X</span>
+                <input type="number" value="0" />
+              </label>
+
+              <label class="form-field">
+                <span>Upravenie stĺpca Y</span>
+                <input type="number" value="0" />
+              </label>
+            </div>
+          </article>
+        </section>
+
+        <div class="orders-footer">
+          <button class="primary-btn" type="button">ULOŽIŤ</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+                                  </html>
