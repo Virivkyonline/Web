@@ -1,131 +1,343 @@
-<section class="detail-form-grid">
-  <article class="panel">
-    <h2>Kategórie produktu</h2>
-
-    <div class="category-assign-list">
-      <div class="category-assign-item">
-        <label class="category-main-check">
-          <input type="checkbox" checked />
-          <span>Akrylátová vírivka</span>
-        </label>
-        <div class="category-tags">
-          <span class="mini-badge badge-normal">Bežná</span>
-          <span class="mini-badge badge-visible">Zákazník vidí</span>
-          <span class="mini-badge badge-menu">V menu</span>
-          <span class="mini-badge badge-index">Google index</span>
-        </div>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Detail produktu</title>
+  <link rel="stylesheet" href="css/admin.css?v=4" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">PLATINUM LECH SPA</div>
       </div>
 
-      <div class="category-assign-item">
-        <label class="category-main-check">
-          <input type="checkbox" checked />
-          <span>Dvojmiestna vírivka</span>
-        </label>
-        <div class="category-tags">
-          <span class="mini-badge badge-normal">Bežná</span>
-          <span class="mini-badge badge-visible">Zákazník vidí</span>
-          <span class="mini-badge badge-menu">V menu</span>
-          <span class="mini-badge badge-index">Google index</span>
-        </div>
-      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="index.html">Základný prehľad</a>
+        <a class="nav-item" href="orders.html">Objednávky</a>
+        <a class="nav-item active" href="products.html">Produkty</a>
+        <a class="nav-item" href="#">Zákazníci</a>
+        <a class="nav-item" href="#">Doklady</a>
+        <a class="nav-item" href="categories.html">Kategórie</a>
+        <a class="nav-item" href="#">Titulná strana</a>
+        <a class="nav-item" href="#">Import / Export</a>
+        <a class="nav-item" href="#">Nastavenia</a>
+      </nav>
+    </aside>
 
-      <div class="category-assign-item">
-        <label class="category-main-check">
-          <input type="checkbox" checked />
-          <span>Vírivka na terase</span>
-        </label>
-        <div class="category-tags">
-          <span class="mini-badge badge-normal">Bežná</span>
-          <span class="mini-badge badge-visible">Zákazník vidí</span>
-          <span class="mini-badge badge-index">Google index</span>
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="search-box">
+            <input type="text" placeholder="Hľadať objednávky, produkty alebo zákazníkov" />
+            <button type="button">Hľadať</button>
+          </div>
         </div>
-      </div>
 
-      <div class="category-assign-item">
-        <label class="category-main-check">
-          <input type="checkbox" checked />
-          <span>Luxusné vírivky</span>
-        </label>
-        <div class="category-tags">
-          <span class="mini-badge badge-normal">Bežná</span>
-          <span class="mini-badge badge-visible">Zákazník vidí</span>
-          <span class="mini-badge badge-menu">V menu</span>
-          <span class="mini-badge badge-index">Google index</span>
+        <div class="topbar-right">
+          <button class="icon-btn" type="button">🔔</button>
+          <button class="icon-btn" type="button">👤</button>
         </div>
-      </div>
+      </header>
 
-      <div class="category-assign-item">
-        <label class="category-main-check">
-          <input type="checkbox" checked />
-          <span>Vírivka Bratislava</span>
-        </label>
-        <div class="category-tags">
-          <span class="mini-badge badge-seo">SEO</span>
-          <span class="mini-badge badge-hidden">Skryté pre zákazníka</span>
-          <span class="mini-badge badge-hidden">Nie je v menu</span>
-          <span class="mini-badge badge-index">Google index</span>
-        </div>
-      </div>
+      <main class="content">
+        <section class="page-header order-detail-head">
+          <div>
+            <p class="eyebrow">Produkty</p>
+            <h1>Produkt Vírivka SUN 200x160x90</h1>
+            <p class="detail-subtitle">Ideálna voľba pre pohodlie a relaxáciu v menšom priestore</p>
+          </div>
 
-      <div class="category-assign-item">
-        <label class="category-main-check">
-          <input type="checkbox" checked />
-          <span>Vírivka Košice</span>
-        </label>
-        <div class="category-tags">
-          <span class="mini-badge badge-seo">SEO</span>
-          <span class="mini-badge badge-hidden">Skryté pre zákazníka</span>
-          <span class="mini-badge badge-hidden">Nie je v menu</span>
-          <span class="mini-badge badge-index">Google index</span>
-        </div>
-      </div>
+          <div class="detail-head-actions">
+            <a href="products.html" class="secondary-btn">Späť na produkty</a>
+          </div>
+        </section>
 
-      <div class="category-assign-item">
-        <label class="category-main-check">
-          <input type="checkbox" />
-          <span>Doplnky a voliteľná výbava</span>
-        </label>
-        <div class="category-tags">
-          <span class="mini-badge badge-normal">Bežná</span>
-          <span class="mini-badge badge-visible">Zákazník vidí</span>
-          <span class="mini-badge badge-menu">V menu</span>
-          <span class="mini-badge badge-index">Google index</span>
+        <section class="panel">
+          <div class="order-tabs">
+            <button class="tab-btn active" type="button">Hlavné údaje</button>
+            <button class="tab-btn" type="button">Cenník</button>
+            <button class="tab-btn" type="button">Sklad</button>
+            <button class="tab-btn" type="button">Kategórie</button>
+            <button class="tab-btn" type="button">Parametre</button>
+            <button class="tab-btn" type="button">Súvisiace</button>
+            <button class="tab-btn" type="button">Pokročilé</button>
+          </div>
+
+          <div class="detail-form-grid">
+            <article class="panel inner-panel">
+              <h2>Hlavné údaje</h2>
+
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Názov tovaru</span>
+                  <input type="text" value="Vírivka SUN 200x160x90 – Ideálna voľba pre pohodlie a relaxáciu v menšom priestore" />
+                </label>
+
+                <label class="form-field">
+                  <span>URL adresa</span>
+                  <input type="text" value="virivka-sun-200x160x90" />
+                </label>
+
+                <label class="form-field">
+                  <span>Krátky popis</span>
+                  <textarea rows="4">Kompaktná 3-miestna vírivka SUN (200x160x90 cm) – ideálna pre menšie priestory, luxusný relax a efektívna hydromasáž pre váš domov.</textarea>
+                </label>
+
+                <label class="form-field">
+                  <span>Podrobné informácie o produkte</span>
+                  <textarea rows="8">Vírivka SUN je ideálne riešenie pre zákazníkov, ktorí chcú komfortnú a kompaktnú vírivku s moderným vzhľadom. Produkt je vhodný na terasu aj do záhrady. V cene je doprava a montáž podľa logiky produktu.</textarea>
+                </label>
+              </div>
+            </article>
+
+            <article class="panel inner-panel">
+              <h2>SEO a viditeľnosť</h2>
+
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>SEO title</span>
+                  <input type="text" value="Vírivka SUN 200x160x90 cm – 3-miestna kompaktná vírivka" />
+                </label>
+
+                <label class="form-field">
+                  <span>Meta description</span>
+                  <textarea rows="5">Kompaktná 3-miestna vírivka SUN 200x160x90 cm – ideálna voľba pre menšie priestory, luxusný relax a efektívna hydromasáž pre váš domov.</textarea>
+                </label>
+
+                <label class="form-field">
+                  <span>Viditeľnosť</span>
+                  <select>
+                    <option selected>Zobraziť produkt</option>
+                    <option>Skrytý produkt</option>
+                  </select>
+                </label>
+
+                <label class="form-field">
+                  <span>Interná poznámka</span>
+                  <textarea rows="4" placeholder="Interná poznámka k produktu..."></textarea>
+                </label>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="detail-form-grid">
+          <article class="panel">
+            <div class="panel-head">
+              <h2>Varianty a cenník</h2>
+              <button class="secondary-btn" type="button">Pridať variant</button>
+            </div>
+
+            <div class="table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Názov variantu</th>
+                    <th>Cena</th>
+                    <th>DPH</th>
+                    <th>Kód</th>
+                    <th>Dostupnosť</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ŠEDÁ / Gypsum</td>
+                    <td>€5 800</td>
+                    <td>23 %</td>
+                    <td>47/SED9</td>
+                    <td>Skladom</td>
+                  </tr>
+                  <tr>
+                    <td>HNEDÁ / Mayan Copper</td>
+                    <td>€5 800</td>
+                    <td>23 %</td>
+                    <td>47/HNE2</td>
+                    <td>Na objednávku</td>
+                  </tr>
+                  <tr>
+                    <td>ANTRACIT / Ocean Wave</td>
+                    <td>€5 800</td>
+                    <td>23 %</td>
+                    <td>47/ANT4</td>
+                    <td>Na objednávku</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Príznaky produktu</h2>
+
+            <div class="check-list">
+              <label><input type="checkbox" /> Akcia</label>
+              <label><input type="checkbox" /> Novinka</label>
+              <label><input type="checkbox" checked /> Tip</label>
+              <label><input type="checkbox" checked /> Viac farieb skladom</label>
+              <label><input type="checkbox" /> Výpredaj</label>
+            </div>
+          </article>
+        </section>
+
+        <section class="detail-form-grid">
+          <article class="panel">
+            <h2>Kategórie produktu</h2>
+
+            <div class="category-assign-list">
+              <div class="category-assign-item">
+                <label class="category-main-check">
+                  <input type="checkbox" checked />
+                  <span>Akrylátová vírivka</span>
+                </label>
+                <div class="category-tags">
+                  <span class="mini-badge badge-normal">Bežná</span>
+                  <span class="mini-badge badge-visible">Zákazník vidí</span>
+                  <span class="mini-badge badge-menu">V menu</span>
+                  <span class="mini-badge badge-index">Google index</span>
+                </div>
+              </div>
+
+              <div class="category-assign-item">
+                <label class="category-main-check">
+                  <input type="checkbox" checked />
+                  <span>Dvojmiestna vírivka</span>
+                </label>
+                <div class="category-tags">
+                  <span class="mini-badge badge-normal">Bežná</span>
+                  <span class="mini-badge badge-visible">Zákazník vidí</span>
+                  <span class="mini-badge badge-menu">V menu</span>
+                  <span class="mini-badge badge-index">Google index</span>
+                </div>
+              </div>
+
+              <div class="category-assign-item">
+                <label class="category-main-check">
+                  <input type="checkbox" checked />
+                  <span>Vírivka na terase</span>
+                </label>
+                <div class="category-tags">
+                  <span class="mini-badge badge-normal">Bežná</span>
+                  <span class="mini-badge badge-visible">Zákazník vidí</span>
+                  <span class="mini-badge badge-index">Google index</span>
+                </div>
+              </div>
+
+              <div class="category-assign-item">
+                <label class="category-main-check">
+                  <input type="checkbox" checked />
+                  <span>Luxusné vírivky</span>
+                </label>
+                <div class="category-tags">
+                  <span class="mini-badge badge-normal">Bežná</span>
+                  <span class="mini-badge badge-visible">Zákazník vidí</span>
+                  <span class="mini-badge badge-menu">V menu</span>
+                  <span class="mini-badge badge-index">Google index</span>
+                </div>
+              </div>
+
+              <div class="category-assign-item">
+                <label class="category-main-check">
+                  <input type="checkbox" checked />
+                  <span>Vírivka Bratislava</span>
+                </label>
+                <div class="category-tags">
+                  <span class="mini-badge badge-seo">SEO</span>
+                  <span class="mini-badge badge-hidden">Skryté pre zákazníka</span>
+                  <span class="mini-badge badge-hidden">Nie je v menu</span>
+                  <span class="mini-badge badge-index">Google index</span>
+                </div>
+              </div>
+
+              <div class="category-assign-item">
+                <label class="category-main-check">
+                  <input type="checkbox" checked />
+                  <span>Vírivka Košice</span>
+                </label>
+                <div class="category-tags">
+                  <span class="mini-badge badge-seo">SEO</span>
+                  <span class="mini-badge badge-hidden">Skryté pre zákazníka</span>
+                  <span class="mini-badge badge-hidden">Nie je v menu</span>
+                  <span class="mini-badge badge-index">Google index</span>
+                </div>
+              </div>
+
+              <div class="category-assign-item">
+                <label class="category-main-check">
+                  <input type="checkbox" />
+                  <span>Doplnky a voliteľná výbava</span>
+                </label>
+                <div class="category-tags">
+                  <span class="mini-badge badge-normal">Bežná</span>
+                  <span class="mini-badge badge-visible">Zákazník vidí</span>
+                  <span class="mini-badge badge-menu">V menu</span>
+                  <span class="mini-badge badge-index">Google index</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid two-cols category-settings-grid">
+              <label class="form-field">
+                <span>Predvolená kategória</span>
+                <select>
+                  <option selected>Akrylátová vírivka</option>
+                  <option>Dvojmiestna vírivka</option>
+                  <option>Luxusné vírivky</option>
+                  <option>Vírivka Bratislava</option>
+                  <option>Vírivka Košice</option>
+                </select>
+              </label>
+
+              <label class="form-field">
+                <span>Hlavná SEO kategória</span>
+                <select>
+                  <option>Žiadna</option>
+                  <option selected>Vírivka Bratislava</option>
+                  <option>Vírivka Košice</option>
+                </select>
+              </label>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Fotogaléria</h2>
+
+            <div class="gallery-grid">
+              <div class="gallery-item">Obrázok 1</div>
+              <div class="gallery-item">Obrázok 2</div>
+              <div class="gallery-item">Obrázok 3</div>
+              <div class="gallery-item">Obrázok 4</div>
+              <div class="gallery-item add-gallery">Nahrať</div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <h2>Súvisiace produkty a videá</h2>
+
+          <div class="form-grid two-cols">
+            <label class="form-field">
+              <span>Súvisiaci tovar</span>
+              <input type="text" value="Schodíky Standard, Tepelné čerpadlo ZEALUX" />
+            </label>
+
+            <label class="form-field">
+              <span>YouTube video</span>
+              <input type="text" placeholder="https://youtube.com/..." />
+            </label>
+          </div>
+        </section>
+
+        <div class="orders-footer">
+          <button class="secondary-btn" type="button">Viac funkcií</button>
+          <button class="primary-btn" type="button">Uložiť</button>
         </div>
-      </div>
+      </main>
     </div>
+  </div>
 
-    <div class="form-grid two-cols category-settings-grid">
-      <label class="form-field">
-        <span>Predvolená kategória</span>
-        <select>
-          <option selected>Akrylátová vírivka</option>
-          <option>Dvojmiestna vírivka</option>
-          <option>Luxusné vírivky</option>
-          <option>Vírivka Bratislava</option>
-          <option>Vírivka Košice</option>
-        </select>
-      </label>
-
-      <label class="form-field">
-        <span>Hlavná SEO kategória</span>
-        <select>
-          <option>Žiadna</option>
-          <option selected>Vírivka Bratislava</option>
-          <option>Vírivka Košice</option>
-        </select>
-      </label>
-    </div>
-  </article>
-
-  <article class="panel">
-    <h2>Fotogaléria</h2>
-
-    <div class="gallery-grid">
-      <div class="gallery-item">Obrázok 1</div>
-      <div class="gallery-item">Obrázok 2</div>
-      <div class="gallery-item">Obrázok 3</div>
-      <div class="gallery-item">Obrázok 4</div>
-      <div class="gallery-item add-gallery">Nahrať</div>
-    </div>
-  </article>
-</section>
+  <script src="js/admin.js"></script>
+</body>
+</html>
