@@ -1,1 +1,445 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt | Platinum Lech Spa</title>
+  <meta name="description" content="Kontaktujte Platinum Lech Spa. Pošlite dopyt k produktu, výbave, dodaniu alebo servisu." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --bg-2:#121b2d;
+      --panel:#111a2b;
+      --panel-2:#18243b;
+      --line:rgba(255,255,255,.10);
+      --text:#f5f7fb;
+      --muted:#b8c3d6;
+      --gold:#d4af37;
+      --gold-2:#f0d67a;
+      --white:#ffffff;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:22px;
+      --max:1100px;
+    }
 
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,.13), transparent 24%),
+        linear-gradient(180deg, #09111e 0%, #0b1220 100%);
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max), calc(100% - 28px)); margin:0 auto}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:30;
+      backdrop-filter:blur(12px);
+      background:rgba(7,12,22,.78);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      min-height:74px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand-mark{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      background:linear-gradient(135deg, #c89a2a, #f0d67a);
+      color:#111;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:var(--shadow);
+      flex-shrink:0;
+    }
+
+    .brand-title{
+      font-weight:700;
+      letter-spacing:.04em;
+      font-size:18px;
+    }
+
+    .brand-sub{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:2px;
+    }
+
+    .nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .nav a:hover{color:var(--white)}
+
+    .wrap{
+      padding:44px 0 50px;
+    }
+
+    .header{
+      margin-bottom:22px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--gold-2);
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      margin-bottom:14px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:34px;
+      height:1px;
+      background:rgba(240,214,122,.8);
+      display:block;
+    }
+
+    h1{
+      margin:0;
+      font-size:46px;
+      line-height:1.05;
+    }
+
+    .header p{
+      margin:16px 0 0;
+      color:var(--muted);
+      line-height:1.65;
+      max-width:760px;
+      font-size:18px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:20px;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.018));
+      border:1px solid var(--line);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      padding:26px;
+    }
+
+    .card h2{
+      margin:0 0 16px;
+      font-size:28px;
+    }
+
+    .contact-item{
+      padding:16px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .contact-item:last-child{border-bottom:0}
+    .contact-item strong{
+      display:block;
+      color:var(--gold-2);
+      margin-bottom:6px;
+      font-size:14px;
+    }
+
+    .contact-item span{
+      color:#eef3fb;
+      line-height:1.6;
+      word-break:break-word;
+    }
+
+    .note{
+      margin-top:18px;
+      padding:16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    .form-grid{
+      display:grid;
+      gap:16px;
+    }
+
+    .two{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    label{
+      display:grid;
+      gap:8px;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    label span{
+      color:#e8eef8;
+    }
+
+    input, textarea{
+      width:100%;
+      border:1px solid rgba(255,255,255,.12);
+      background:#162137;
+      color:#fff;
+      border-radius:16px;
+      padding:14px 16px;
+      outline:none;
+      font:inherit;
+    }
+
+    input:focus, textarea:focus{
+      border-color:rgba(212,175,55,.55);
+      box-shadow:0 0 0 3px rgba(212,175,55,.12);
+    }
+
+    textarea{
+      min-height:160px;
+      resize:vertical;
+      line-height:1.5;
+    }
+
+    .small{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+      font-weight:400;
+    }
+
+    .check{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .check input{
+      width:20px;
+      height:20px;
+      margin-top:2px;
+      flex-shrink:0;
+    }
+
+    .captcha{
+      padding:15px 16px;
+      border-radius:16px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      color:#fff;
+      font-weight:700;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+
+    .btn{
+      min-height:54px;
+      padding:0 24px;
+      border-radius:16px;
+      border:1px solid transparent;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:15px;
+      cursor:pointer;
+      text-decoration:none;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, #c89a2a, #f0d67a);
+      color:#151515;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.04);
+      border-color:rgba(255,255,255,.14);
+      color:#fff;
+    }
+
+    .footer{
+      padding:24px 0 42px;
+    }
+
+    .footer-inner{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:22px;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 860px){
+      .grid,.two{grid-template-columns:1fr}
+      .nav{display:none}
+      h1{font-size:36px}
+      .card{padding:20px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">PL</div>
+        <div>
+          <div class="brand-title">PLATINUM LECH SPA</div>
+          <div class="brand-sub">Kontakt a dopyty k produktom</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Úvod</a>
+        <a href="index.html#modely">Modely</a>
+        <a href="index.html#vyhody">Výhody</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="container">
+      <section class="header">
+        <div class="eyebrow">Kontakt</div>
+        <h1>Napíšte nám dopyt</h1>
+        <p>
+          Máte otázku k modelu, výbave, farebnému prevedeniu, dodaniu alebo servisu?
+          Pošlite nám správu a ozveme sa vám späť.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Kontaktné údaje</h2>
+
+          <div class="contact-item">
+            <strong>Telefón</strong>
+            <span>+421 949 444 066</span>
+          </div>
+
+          <div class="contact-item">
+            <strong>Email</strong>
+            <span>info@virivkyonline.sk</span>
+          </div>
+
+          <div class="contact-item">
+            <strong>Značka</strong>
+            <span>Platinum Lech Spa</span>
+          </div>
+
+          <div class="contact-item">
+            <strong>Web</strong>
+            <span>virivkyonline.sk</span>
+          </div>
+
+          <div class="note">
+            Pre rýchlejšie vybavenie dopytu vyplňte prosím správne meno, email aj telefón.
+            Pri drahších produktoch je telefonický kontakt veľmi užitočný.
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Formulár dopytu</h2>
+
+          <form class="form-grid" action="#" method="post">
+            <div class="two">
+              <label>
+                <span>Meno a priezvisko *</span>
+                <input type="text" name="name" required />
+              </label>
+
+              <label>
+                <span>Email *</span>
+                <input type="email" name="email" required />
+              </label>
+            </div>
+
+            <div class="two">
+              <label>
+                <span>Telefón *</span>
+                <input type="tel" name="phone" required />
+              </label>
+
+              <label>
+                <span>Predmet</span>
+                <input type="text" name="subject" placeholder="Napr. Dopyt k modelu SUN" />
+              </label>
+            </div>
+
+            <label>
+              <span>Správa *</span>
+              <textarea name="message" required placeholder="Napíšte svoju otázku k produktu, výbave, dodaniu alebo servisu..."></textarea>
+            </label>
+
+            <label class="check">
+              <input type="checkbox" required />
+              <span>Súhlasím so spracovaním osobných údajov za účelom vybavenia môjho dopytu. *</span>
+            </label>
+
+            <div class="captcha">Bezpečnostné overenie / captcha sem doplníš podľa riešenia, ktoré použiješ.</div>
+
+            <div class="small">
+              Polia označené hviezdičkou sú povinné. Email a telefón sú nastavené ako povinné.
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-primary" type="submit">Odoslať dopyt</button>
+              <a class="btn btn-secondary" href="index.html">Späť na hlavnú stránku</a>
+            </div>
+          </form>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© Platinum Lech Spa</div>
+      <div>Kontakt • Dopyty • Poradenstvo • Servis</div>
+    </div>
+  </footer>
+</body>
+</html>
